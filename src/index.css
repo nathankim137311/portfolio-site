@@ -5,4 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .side-bar {
+        @apply absolute bg-[#1A1A1A] h-56 w-screen bg-clouds-pattern text-white px-6;
+    }
+}
+
 
