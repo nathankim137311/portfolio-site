@@ -9,6 +9,7 @@ module.exports = {
       },
       backgroundImage: {        
         'clouds-pattern': "url('./assets/svg/endless-clouds.svg')",
+        'glamorous': "url('./assets/svg/glamorous.svg')",
       },
       screens: {
         'xs': '320px'
