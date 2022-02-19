@@ -3,10 +3,9 @@ import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <>
-      <h1>App</h1>
+    <div className='bg-[#1A1A1A] bg-clouds-pattern h-80'>
       <NavBar />
-    </>
+    </div>
   );
 }
 
