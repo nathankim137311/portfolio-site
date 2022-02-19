@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'monoton': ['Monoton', 'sans-serif'],
+      },
       backgroundImage: {        
         'clouds-pattern': "url('./assets/svg/endless-clouds.svg')",
       },
