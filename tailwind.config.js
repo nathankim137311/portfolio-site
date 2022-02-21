@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         'monoton': ['Monoton', 'sans-serif'],
         'reggae': ['"Reggae One"'],
+        'caveat': ['Caveat'],
       },
       backgroundSize: {
         '96': '24rem',

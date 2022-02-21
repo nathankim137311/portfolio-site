@@ -4,9 +4,9 @@ import pointDown from '../assets/gif/point-down.gif';
 
 export default function About() {
   return (
-    <div className='relative h-screen bg-[#222431] text-white px-6 flex flex-col justify-center items-center bg-glamorous'>
-      <h2 className='absolute text-3xl text-center -translate-x-1/2 top-10 left-1/2 font-reggae'>ABOUT</h2>
-      <img className='w-1/2 h-auto mb-6 text-white rounded-full' src={avatar} alt="" />
+    <div className='relative h-screen bg-[#222431] text-white px-6 flex flex-col justify-start items-center bg-glamorous'>
+      <h2 className='mt-12 text-3xl text-center font-reggae'>ABOUT</h2>
+      <img className='w-1/2 h-auto my-10 text-white rounded-full' src={avatar} alt="" />
       <p className='text-lg text-start'>Hello world! (not overused at all) I am a front end developer based in Washington state. From painting on canvas to typing lines of code on an IDE. I combine <strong className='text-green-500'> creativity and logic</strong> to building front end web applications.
       </p>
       <div>
