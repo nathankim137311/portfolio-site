@@ -14,7 +14,6 @@ module.exports = {
       },
       backgroundImage: {        
         'clouds-pattern': "url('./assets/svg/endless-clouds.svg')",
-        'galaxy': "url(./assets/jpg/galaxy.jpg)",
         'glamorous': "url('./assets/svg/glamorous.svg')",
       },
       screens: {
