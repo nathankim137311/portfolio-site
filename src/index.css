@@ -11,6 +11,10 @@
     .side-bar {
         @apply absolute w-screen h-56 px-6 text-white bg-[#1A1A1A] bg-clouds-pattern;
     }
+
+    .contact-input {
+        @apply w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none focus:outline-none focus:ring;
+    }
 }
 
 

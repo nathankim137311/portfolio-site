@@ -6,7 +6,7 @@ import arrowDown from '../assets/gif/arrow-down.gif';
 
 export default function Intro() {
   return (
-    <div className='flex flex-col justify-center bg-[#1A1A1A] bg-clouds-pattern h-screen'>
+    <div className='relative flex flex-col justify-center h-screen'>
       <div className='flex flex-col items-start py-2 text-white'>
         <div className='px-6'>
           <h1 className='text-5xl font-monoton'>Nathan Kim.</h1>
