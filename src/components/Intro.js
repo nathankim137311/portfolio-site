@@ -13,7 +13,7 @@ export default function Intro() {
           <p className='mt-4 mb-8 text-lg text-slate-300'>I am a <strong className='text-[#A400FF]'>software developer</strong> that builds and designs responsive web applications.</p>
         </div>
         <div className='flex items-center justify-between w-full px-6 drop-shadow-lg'>
-          <button className='bg-[#A400FF] py-2 px-6 text-md rounded-md font-bold w-1/2 text-slate-200'>Projects</button>
+          <button className='w-1/2 purple-btn'>Contact</button>
           <div className='flex'>
             <Link to='https://github.com/nathankim137311'>
               <BsGithub className='w-6 h-6 mx-2'/>

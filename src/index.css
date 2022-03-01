@@ -13,7 +13,11 @@
     }
 
     .contact-input {
-        @apply w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none focus:outline-none focus:ring;
+        @apply w-full px-3 py-3 text-sm text-white placeholder-gray-400 bg-[#4B5563] border-0 rounded shadow outline-[#66D3FA] focus:outline-2;
+    }
+
+    .purple-btn {
+        @apply px-6 py-3 mb-1 text-base font-bold text-slate-200 transition-all duration-150 ease-linear bg-[#A400FF] rounded-md shadow outline-none active:bg-[#be44ff] hover:shadow-lg focus:outline-none;
     }
 }
 

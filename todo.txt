@@ -1,0 +1,5 @@
+// Portfolio site // 
+    design project page
+    implement react-spring animations
+    add react-router-dom to project
+    implement mail functionality for contact page
