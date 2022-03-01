@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 export default function Contact() {
-
   return (
     <div className='flex flex-col justify-center h-screen'>
         <div className='px-6'>
-            <h1 className='mb-8 text-2xl font-bold text-center text-white'>Contact</h1>
+            <h2 className='mb-8 text-3xl font-bold text-center text-white'>Contact</h2>
             <form action="">
                 <div className='pt-0 mb-6'>
                     <input 
