@@ -15,7 +15,7 @@ module.exports = {
       backgroundImage: {        
         'clouds-pattern': "url('./assets/svg/endless-clouds.svg')",
         'glamorous': "url('./assets/svg/glamorous.svg')",
-        'space': "url('./assets/jpg/stars-space.jpg')"
+        'lego-clone': "url('./assets/png/lego-clone-home.png')"
       },
       screens: {
         'xs': '320px'
