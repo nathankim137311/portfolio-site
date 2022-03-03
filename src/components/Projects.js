@@ -71,8 +71,8 @@ export default function Projects() {
 const ProjectCard = ({ project }) => {
     return (
         <>
-            <div className='flex flex-col items-center justify-center px-4 pt-4 pb-6 text-black bg-white shadow-lg rounded-xl'>
-                <div className='w-full py-4 font-medium text-[#0D9488]'>
+            <div className='flex flex-col items-center justify-center px-4 pt-4 pb-6 text-white bg-[#1E293B] shadow-lg rounded-xl'>
+                <div className='w-full py-4 font-medium text-[#15ebd9]'>
                     <span className='text-sm'>{project.type}</span>
                 </div>
                 <div className='w-full h-32'>
@@ -85,18 +85,18 @@ const ProjectCard = ({ project }) => {
                         {project.title}
                     </a>
                 </div>
-                <div className='h-20 py-2 overflow-hidden leading-6 text-left text-gray-600'>
+                <div className='h-20 py-2 overflow-hidden leading-6 text-left text-gray-300'>
                     <p>{project.description}</p>
                 </div>
                 <div className='flex items-center justify-between w-full py-6'>
                     <a href={project.github_url} target='_blank' rel='noreferrer'>
-                        <BsGithub className='w-6 h-6 transition-all duration-200 ease-linear hover:text-[#0D9488]' />
+                        <BsGithub className='w-6 h-6 transition-all duration-200 ease-linear hover:text-[#15ebd9]' />
                     </a>
                     <a href={project.live_url} className='bg-[#A400FF] text-white text-sm py-2 rounded-md px-4 hover:bg-transparent hover:text-black border-[#A400FF] border-2 shadow-lg'>
                         Live site
                     </a>
                 </div>
-                <small className='text-justify text-slate-600'>{project.tech}</small>
+                <small className='text-justify text-slate-400'>{project.tech}</small>
             </div>
         </>
     )
