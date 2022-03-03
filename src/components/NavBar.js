@@ -40,21 +40,21 @@ const Menu = ({ active, setActive}) => {
         </button>
       </div>
       <nav>
-        <ul className='text-md'>
-          <li className='flex items-center justify-start h-10 px-2 border-gray-700 border-y-2 text-slate-200'>
-            <EmojiHappyIcon className='w-6 h-6 mr-4'/>
+        <ul className='text-white text-md'>
+          <li className='flex items-center justify-start h-10 px-2 border-gray-700 border-y-2'>
+            <EmojiHappyIcon className='w-6 h-6 mr-4 text-[#15ebd9]'/>
             <h3>About</h3>
           </li>
-          <li className='flex items-center justify-start h-10 px-2 border-b-2 border-gray-700 text-slate-200'>
-            <DocumentTextIcon className='w-6 h-6 mr-4'/>
+          <li className='flex items-center justify-start h-10 px-2 border-b-2 border-gray-700'>
+            <DocumentTextIcon className='w-6 h-6 mr-4 text-[#15ebd9]'/>
             <h3>Skills</h3>
           </li>
-          <li className='flex items-center justify-start h-10 px-2 border-b-2 border-gray-700 text-slate-200'>
-            <CollectionIcon className='w-6 h-6 mr-4'/>
+          <li className='flex items-center justify-start h-10 px-2 border-b-2 border-gray-700'>
+            <CollectionIcon className='w-6 h-6 mr-4 text-[#15ebd9]'/>
             <h3>Projects</h3>
           </li>
-          <li className='flex items-center justify-start h-10 px-2 border-b-2 border-gray-700 text-slate-200'>
-            <PhoneIcon className='w-6 h-6 mr-4'/>
+          <li className='flex items-center justify-start h-10 px-2 border-b-2 border-gray-700'>
+            <PhoneIcon className='w-6 h-6 mr-4 text-[#15ebd9]'/>
             <h3>Contact</h3>
           </li>
         </ul>
