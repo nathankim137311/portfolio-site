@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import ProjectDetails from './components/ProjectDetails';
+import ThankYou from './components/ThankYou';
 import {
   BrowserRouter,
   Routes,
@@ -14,7 +14,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
-        <Route path='/projects/:id' element={<ProjectDetails />} />
+        <Route path='/success' element={<ThankYou />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
