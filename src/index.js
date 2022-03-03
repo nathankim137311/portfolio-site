@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import ProjectDetails from './components/ProjectDetails';
 import {
   BrowserRouter,
   Routes,
@@ -14,7 +13,6 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
-        <Route path='/projects/:id' element={<ProjectDetails />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
