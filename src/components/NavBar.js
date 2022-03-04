@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon, } from '@heroicons/react/outline';
 import { EmojiHappyIcon, DocumentTextIcon, CollectionIcon, PhoneIcon } from '@heroicons/react/solid';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
   const [active, setActive] = useState(false);
@@ -11,21 +12,31 @@ export default function NavBar() {
 
   return (
     <>
-      <header className='absolute top-0 flex items-center justify-between w-full px-6 py-4 text-white bg-transparent'>
-          <h1 className='text-sm font-bold text-white'>nathankim</h1>
-          <button onClick={toggleMenu}>
-              <MenuIcon className='w-6 h-6'/>
-          </button>
-          <nav className='xs:hidden'>
-              <ul className='flex'>
-                  <li>About</li>
-                  <li>Skills</li>
-                  <li>Projects</li>
-                  <li>Contact</li>
-              </ul>
-          </nav>
+      <header className='absolute top-0 w-full px-6 py-4 text-white bg-transparent sm:px-10 sm:py-6'>
+          <div className='flex items-center justify-between lg:max-w-6xl lg:mx-auto'>
+            <h1 className='text-sm font-bold text-white md:text-base'>nathankim</h1>
+            <button onClick={toggleMenu}>
+                <MenuIcon className='w-6 h-6 md:hidden'/>
+            </button>
+            <nav className='hidden w-1/2 md:block'>
+                <ul className='flex justify-between'>
+                    <li className=''>
+                      <Link to=''>About</Link>
+                    </li>
+                    <li className=''>
+                      <Link to=''>Skills</Link>
+                    </li>
+                    <li className=''>
+                      <Link to=''>Projects</Link>
+                    </li>
+                    <li>
+                      <Link to=''>Contact</Link>
+                    </li>
+                </ul>
+            </nav>
+          </div>
       </header>
-      <Menu active={active} setActive={setActive} />
+      <Menu className='md:hidden' active={active} setActive={setActive} />
     </>
   )
 }
