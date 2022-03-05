@@ -59,7 +59,7 @@ export default function Projects() {
     return (
         <div className='text-white'>
             <h2 className='pt-20 text-3xl font-bold text-center text-white'>Projects</h2>
-            <div className='grid items-center justify-center grid-cols-1 gap-12 px-6 pt-20 mx-auto w-fit grid-row-4'>
+            <div className='grid items-center justify-center grid-cols-1 px-6 pt-20 mx-auto gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-3xl md:gap-12'>
                 {projects.map(project => {
                     return <ProjectCard key={project.id} project={project} />
                 })}
@@ -75,7 +75,7 @@ const ProjectCard = ({ project }) => {
                 <div className='w-full py-4 font-medium text-[#15ebd9]'>
                     <span className='text-sm'>{project.type}</span>
                 </div>
-                <div className='w-full h-32'>
+                <div className='w-full h-32 md:h-44'>
                     <a href={project.live_url}>
                         <img className='object-cover object-top w-full h-full rounded shadow-lg' src={ project.img_url } alt="" />
                     </a>
@@ -92,11 +92,11 @@ const ProjectCard = ({ project }) => {
                     <a href={project.github_url} target='_blank' rel='noreferrer'>
                         <BsGithub className='w-6 h-6 transition-all duration-200 ease-linear hover:text-[#15ebd9]' />
                     </a>
-                    <a href={project.live_url} className='bg-[#A400FF] text-white text-sm py-2 rounded-md px-4 hover:bg-transparent hover:text-black border-[#A400FF] border-2 shadow-lg'>
+                    <a href={project.live_url} className='bg-[#A400FF] text-white text-sm py-2 rounded-md px-4 hover:bg-transparent hover:text-white border-[#A400FF] border-2 shadow-lg'>
                         Live site
                     </a>
                 </div>
-                <small className='text-justify text-slate-400'>{project.tech}</small>
+                <small className='h-10 text-justify text-slate-400'>{project.tech}</small>
             </div>
         </>
     )
