@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className='h-screen text-white'>
         <div className='px-6 max-w-[768px] md:mx-auto my-20'>
-            <h2 className='text-3xl font-extrabold text-center text-white underline underline-offset-8'>About</h2>
+            <h2 className='font-serif text-3xl font-extrabold text-center text-white underline underline-offset-8'>About</h2>
             <div className='bg-[#151c29] rounded-xl px-4 py-10'>
                 <div className='flex flex-row justify-center my-10 sm:my-14 lg:my-20'>
                     <img className='w-40 h-40 border-2 border-white rounded-full sm:w-44 sm:h-44 lg:w-52 lg:h-52' src={Avatar} alt="" />

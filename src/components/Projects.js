@@ -59,7 +59,7 @@ export default function Projects() {
     return (
         <>
             <div className='py-20 text-white'>
-                <h2 className='text-3xl font-extrabold text-center text-white underline underline-offset-8'>Projects</h2>
+                <h2 className='font-serif text-3xl font-extrabold text-center text-white underline underline-offset-8'>Projects</h2>
                 <div className='grid items-center justify-center grid-cols-1 px-6 mx-auto mt-20 gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-4xl md:gap-12 lg:gap-20'>
                     {projects.map(project => {
                         return <ProjectCard key={project.id} project={project} />

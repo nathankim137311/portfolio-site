@@ -1,13 +1,16 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
+import NavBar from './NavBar';
 import { Link } from 'react-router-dom';
 import { BsLinkedin, BsGithub, BsTwitter } from 'react-icons/bs';
 import arrowDown from '../assets/gif/arrow-down.gif';
+// import Particles from 'react-tsparticles';
+// import particleConfig from '../config/particle';
 
 export default function Intro() {
   return (
     <div className='relative flex flex-col justify-center h-screen'>
-      <div className='flex flex-col items-start px-6 text-white xs:items-center xs:max-w-2xl sm:mx-auto'>
+      {/* <Particles id='space-particles' className='absolute top-0 bottom-0 left-0 right-0' params={particleConfig} /> */}
+      <div className='flex flex-col items-start px-6 text-white xs:items-center xs:max-w-2xl sm:mx-auto z-[1]'>
         <div>
           <h1 className='text-5xl font-monoton xs:text-center'>Nathan Kim.</h1>
           <p className='mt-4 mb-8 text-lg text-slate-300 xs:text-xl xs:text-center'>I am a <strong className='text-[#15ebd9] font-normal'>software developer</strong> that builds and designs responsive web applications.</p>

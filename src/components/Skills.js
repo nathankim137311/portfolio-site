@@ -15,23 +15,23 @@ export default function Skills() {
   return (
     <>
         <div className='flex flex-col items-center my-20'>
-            <h2 className='mb-20 text-3xl font-extrabold text-center text-white underline underline-offset-8'>Skills</h2>
+            <h2 className='mb-20 font-serif text-3xl font-extrabold text-center text-white underline underline-offset-8'>Skills</h2>
             <div className='w-full px-6 xs:px-12 sm:px-16 py-12 bg-[#0E131F] flex flex-row justify-center'>
-                <ul className='grid w-full max-w-4xl grid-cols-2 text-sm text-white gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-y-12'>
+                <ul className='grid w-full max-w-4xl grid-cols-2 text-sm text-slate-200 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-y-12'>
                     <li className='flex flex-col items-center'>
-                        <div className='skill-badge bg-[#E44D26]'>
+                        <div className='skill-badge bg-[#E44D26] text-white'>
                             <AiFillHtml5 className='w-10 h-10'/>
                         </div>
                         <span>HTML</span>
                     </li>
                     <li className='flex flex-col items-center'>
-                        <div className='skill-badge bg-[#264DE4]'>
+                        <div className='skill-badge bg-[#264DE4] text-white'>
                             <DiCss3 className='w-10 h-10'/>
                         </div>
                         <span>CSS</span>
                     </li>
                     <li className='flex flex-col items-center'>
-                        <div className='skill-badge bg-[#e8cd00]'>
+                        <div className='skill-badge bg-[#e8cd00] text-white'>
                             <DiJavascript1 className='w-10 h-10'/>
                         </div>
                         <span>JavaScript</span>
@@ -43,13 +43,13 @@ export default function Skills() {
                         <span>React</span>
                     </li>
                     <li className='flex flex-col items-center'>
-                        <div className='skill-badge bg-[#00AF6F]'>
+                        <div className='skill-badge bg-[#00AF6F] text-white'>
                             <SiExpress className='w-10 h-10'/>
                         </div>
                         <span>Express</span>
                     </li>
                     <li className='flex flex-col items-center'>
-                        <div className='skill-badge bg-[#52A74B]'>
+                        <div className='skill-badge bg-[#52A74B] text-white'>
                             <SiMongodb className='w-10 h-10'/>
                         </div>
                         <span>MongoDB</span>
@@ -61,13 +61,13 @@ export default function Skills() {
                         <span>NodeJS</span>
                     </li>
                     <li className='flex flex-col items-center'>
-                        <div className='skill-badge bg-[#E44D26]'>
+                        <div className='skill-badge bg-[#E44D26] text-white'>
                             <ImGit className='w-10 h-10'/>
                         </div>
                         <span>Git</span>
                     </li>
                     <li className='flex flex-col items-center'>
-                        <div className='skill-badge bg-[#CF649A]'>
+                        <div className='skill-badge bg-[#CF649A] text-white'>
                             <SiSass className='w-10 h-10'/>
                         </div>
                         <span>SASS</span>
