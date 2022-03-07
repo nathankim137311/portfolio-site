@@ -27,7 +27,7 @@ export default function Intro() {
           </div>
         </div>
       </div>
-      <img className='absolute w-12 h-auto -translate-x-1/2 bottom-10 left-1/2' src={arrowDown} alt="Animated down arrow" />
+      <img className='absolute w-12 h-auto -translate-x-1/2 md:w-16 bottom-10 left-1/2' src={arrowDown} alt="Animated down arrow" />
       <NavBar />
     </div>
   )

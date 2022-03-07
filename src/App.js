@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className='relative bg-[#030406] bg-clouds-pattern'>
+    <div className='relative bg-[#030406]'>
       <Intro />
       <Skills />
       <Projects />

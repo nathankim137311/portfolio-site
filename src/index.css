@@ -1,7 +1,5 @@
 /* Name Heading font */
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,11 +7,11 @@
 
 @layer components {
     .side-bar {
-        @apply absolute w-screen h-56 px-6 text-white bg-[#1A1A1A] bg-clouds-pattern;
+        @apply absolute w-screen h-56 px-6 text-white;
     }
 
     .contact-input {
-        @apply w-full px-3 py-3 text-sm text-white placeholder-slate-300 bg-[#1E293B] border-0 rounded shadow outline-[#15ebd9] focus:outline-2;
+        @apply w-full px-3 py-3 text-sm md:text-base text-white placeholder-slate-300 bg-[#1E293B] border-0 rounded shadow outline-[#15ebd9] focus:outline-2;
     }
 
     .skill-badge {
