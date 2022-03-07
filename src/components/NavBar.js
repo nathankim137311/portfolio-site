@@ -12,9 +12,9 @@ export default function NavBar() {
 
   return (
     <>
-      <header className='absolute top-0 w-full px-6 py-4 text-white bg-transparent sm:px-10 sm:py-6'>
+      <header className='fixed top-0 w-full px-6 py-4 text-white bg-[#030406] sm:px-10 sm:py-6 z-10'>
           <div className='flex items-center justify-between lg:max-w-6xl lg:mx-auto'>
-            <h1 className='text-sm font-bold text-white md:text-base'>nathankim</h1>
+            <h1 className='text-sm font-bold text-white md:text-base hover:cursor-pointer'>nathankim</h1>
             <button onClick={toggleMenu}>
                 <MenuIcon className='w-6 h-6 md:hidden'/>
             </button>

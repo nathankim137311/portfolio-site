@@ -5,9 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+#space-particles {
+    height: 100vh;
+    width: 100vw;
+}
+
 @layer components {
     .side-bar {
-        @apply absolute w-screen h-56 px-6 text-white;
+        @apply absolute hidden w-screen h-56 px-6 text-white;
     }
 
     .contact-input {
