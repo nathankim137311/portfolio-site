@@ -14,7 +14,7 @@ export default function Intro() {
         </div>
         <div className='flex items-center w-full sm:w-1/2 drop-shadow-lg xs:justify-center'>
           <button className='w-1/2 mr-8 purple-btn'>Contact</button>
-          <div className='flex px-4 py-2 bg-gray-900 rounded-full'>
+          <div className='flex px-4 py-2 bg-gray-900 rounded-full md:py-3'>
             <Link to='https://github.com/nathankim137311'>
               <BsGithub className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#15ebd9]'/>
             </Link>

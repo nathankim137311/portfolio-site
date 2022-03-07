@@ -60,7 +60,7 @@ export default function Projects() {
         <>
             <div className='py-20 text-white'>
                 <h2 className='text-3xl font-extrabold text-center text-white underline underline-offset-8'>Projects</h2>
-                <div className='grid items-center justify-center grid-cols-1 px-6 mx-auto mt-20 gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-4xl md:gap-12'>
+                <div className='grid items-center justify-center grid-cols-1 px-6 mx-auto mt-20 gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-4xl md:gap-12 lg:gap-20'>
                     {projects.map(project => {
                         return <ProjectCard key={project.id} project={project} />
                     })}
@@ -92,9 +92,9 @@ const ProjectCard = ({ project }) => {
                 </div>
                 <div className='flex items-center justify-between w-full py-6'>
                     <a href={project.github_url} target='_blank' rel='noreferrer'>
-                        <BsGithub className='xxs:w-6 xxs:h-6 text-white transition-all duration-200 ease-linear hover:text-[#15ebd9]'/>
+                        <BsGithub className='w-6 h-6 text-white transition-all duration-200 ease-linear hover:text-[#15ebd9] md:w-7 md:h-7'/>
                     </a>
-                    <a href={project.live_url} className='bg-[#A400FF] text-white text-sm py-2 rounded-md px-4 hover:bg-transparent hover:text-white border-[#A400FF] border-2 shadow-lg'>
+                    <a href={project.live_url} className='bg-[#A400FF] text-white text-sm py-2 rounded-md px-4 hover:bg-transparent hover:text-white border-[#A400FF] border-2 shadow-lg md:text-base'>
                         Live site
                     </a>
                 </div>

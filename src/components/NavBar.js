@@ -19,18 +19,18 @@ export default function NavBar() {
                 <MenuIcon className='w-6 h-6 md:hidden'/>
             </button>
             <nav className='hidden w-1/2 md:block'>
-                <ul className='flex justify-between'>
-                    <li className=''>
-                      <Link to=''>About</Link>
+                <ul className='flex'>
+                    <li className='hover:underline underline-offset-8 decoration-2 decoration-[#15ebd9] w-1/2'>
+                      <Link className='block w-full text-right' to=''>About</Link>
                     </li>
-                    <li className=''>
-                      <Link to=''>Skills</Link>
+                    <li className='hover:underline underline-offset-8 decoration-2 decoration-[#15ebd9] w-1/2'>
+                      <Link className='block w-full text-right' to=''>Skills</Link>
                     </li>
-                    <li className=''>
-                      <Link to=''>Projects</Link>
+                    <li className='hover:underline underline-offset-8 decoration-2 decoration-[#15ebd9] w-1/2'>
+                      <Link className='block w-full text-right' to=''>Projects</Link>
                     </li>
-                    <li>
-                      <Link to=''>Contact</Link>
+                    <li className='hover:underline underline-offset-8 decoration-2 decoration-[#15ebd9] w-1/2'>
+                      <Link className='block w-full text-right' to=''>Contact</Link>
                     </li>
                 </ul>
             </nav>

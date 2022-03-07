@@ -51,7 +51,7 @@ export default function Contact() {
                     >
                         Send a message
                     </button>
-                    <div className='flex items-center justify-between px-4 py-2 text-white bg-gray-900 rounded-full w-fit'>
+                    <div className='flex items-center justify-between px-4 py-3 text-white bg-gray-900 rounded-full w-fit'>
                         <Link to='https://github.com/nathankim137311'>
                             <BsGithub className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#15ebd9]'/>
                         </Link>

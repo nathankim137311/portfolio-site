@@ -2,7 +2,6 @@ import React from 'react'
 import { AiFillHtml5 } from 'react-icons/ai'
 import { DiCss3, DiJavascript1 } from 'react-icons/di'
 import { 
-    SiJavascript, 
     SiSass, 
     SiMongodb, 
     SiReact, 
