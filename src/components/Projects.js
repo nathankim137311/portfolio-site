@@ -94,7 +94,7 @@ const ProjectCard = ({ project }) => {
                     <a href={project.github_url} target='_blank' rel='noreferrer'>
                         <BsGithub className='w-6 h-6 text-white transition-all duration-200 ease-linear hover:text-[#15ebd9] md:w-7 md:h-7'/>
                     </a>
-                    <a href={project.live_url} className='bg-[#A400FF] text-white text-sm py-2 rounded-md px-4 hover:bg-transparent hover:text-white border-[#A400FF] border-2 shadow-lg md:text-base'>
+                    <a href={project.live_url} className='bg-[#A400FF] text-sm py-2 rounded-md px-4 shadow-lg md:text-base hover:scale-105 transition-all duration-150 ease-linear active:bg-[#be44ff]'>
                         Live site
                     </a>
                 </div>
