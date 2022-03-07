@@ -11,7 +11,7 @@ export default function Projects() {
         title: 'Lego Clone',
         query: 'lego-clone',
         img_url: legoCloneHome,
-        tech: 'MongoDB | Express | React | Node | Git | Tailwind CSS',
+        tech: 'MongoDB | Express | React | Node | Git | TailwindCSS',
         live_url: 'https://lego-clone.herokuapp.com/',
         github_url: 'https://github.com/nathankim137311/lego-store',
         type: 'E-COMMERCE',
@@ -57,46 +57,48 @@ export default function Projects() {
     const projects = [legoClone, starWarsApi, weatherApp, restaurantSite]; 
 
     return (
-        <div className='text-white'>
-            <h2 className='pt-20 text-3xl font-bold text-center text-white'>Projects</h2>
-            <div className='grid items-center justify-center grid-cols-1 px-6 pt-20 mx-auto gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-3xl md:gap-12'>
-                {projects.map(project => {
-                    return <ProjectCard key={project.id} project={project} />
-                })}
+        <>
+            <div className='py-20 text-white'>
+                <h2 className='text-3xl font-extrabold text-center text-white underline underline-offset-8'>Projects</h2>
+                <div className='grid items-center justify-center grid-cols-1 px-6 mx-auto mt-20 gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-4xl md:gap-12'>
+                    {projects.map(project => {
+                        return <ProjectCard key={project.id} project={project} />
+                    })}
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
 const ProjectCard = ({ project }) => {
     return (
         <>
-            <div className='flex flex-col items-center justify-center px-4 pt-4 pb-6 text-white bg-[#1E293B] shadow-lg rounded-xl'>
+            <div className='flex flex-col items-center justify-center px-4 pt-4 pb-6 text-slate-100 bg-[#1E293B] shadow-lg rounded-xl'>
                 <div className='w-full py-4 font-medium text-[#15ebd9]'>
                     <span className='text-sm'>{project.type}</span>
                 </div>
-                <div className='w-full h-32 md:h-44'>
+                <div className='w-full h-32 md:h-44 lg:h-52'>
                     <a href={project.live_url}>
-                        <img className='object-cover object-top w-full h-full rounded shadow-lg' src={ project.img_url } alt="" />
+                        <img className='object-cover object-top w-full h-full rounded shadow-lg opacity-75' src={ project.img_url } alt="" />
                     </a>
                 </div>
                 <div className='flex flex-col items-start w-full py-4'>
-                    <a className='w-full text-xl font-bold' href={project.live_url} target='_blank' rel='noreferrer'>
+                    <a className='w-full font-bold text-white xxs:text-xl md:text-2xl' href={project.live_url} target='_blank' rel='noreferrer'>
                         {project.title}
                     </a>
                 </div>
-                <div className='h-20 py-2 overflow-hidden leading-6 text-left text-gray-300'>
+                <div className='h-20 py-2 overflow-hidden leading-6 text-left text-slate-300 md:text-lg'>
                     <p>{project.description}</p>
                 </div>
                 <div className='flex items-center justify-between w-full py-6'>
                     <a href={project.github_url} target='_blank' rel='noreferrer'>
-                        <BsGithub className='w-6 h-6 transition-all duration-200 ease-linear hover:text-[#15ebd9]' />
+                        <BsGithub className='xxs:w-6 xxs:h-6 text-white transition-all duration-200 ease-linear hover:text-[#15ebd9]'/>
                     </a>
                     <a href={project.live_url} className='bg-[#A400FF] text-white text-sm py-2 rounded-md px-4 hover:bg-transparent hover:text-white border-[#A400FF] border-2 shadow-lg'>
                         Live site
                     </a>
                 </div>
-                <small className='h-10 text-justify text-slate-400'>{project.tech}</small>
+                <small className='h-12 text-justify text-slate-400 md:text-base'>{project.tech}</small>
             </div>
         </>
     )

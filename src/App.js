@@ -1,14 +1,15 @@
 import './App.css';
 import Intro from './components/Intro';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import About from './components/About'; 
-import Projects from './components/Projects';
 
 function App() {
   return (
-    <div className='relative bg-[#1A1A1A] bg-clouds-pattern'>
+    <div className='relative bg-[#030406] bg-clouds-pattern'>
       <Intro />
+      <Skills />
       <Projects />
       <Contact />
       <Footer />
