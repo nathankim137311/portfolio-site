@@ -3,3 +3,15 @@
     implement react-spring animations
     add react-router-dom to project
     implement mail functionality for contact page
+
+// make social media links into its own component
+// rearrange skills and about page, update links
+// skills take up whole screen 
+// outer darker color inner container containing all of the tech badges
+// loading spanner animations
+// particle effects in the background for intro component
+// add animations
+// scroll to view when nav links are clicked
+// underline link based on location
+// hero text effects
+// gradient for buttons 45 degree angle, blue, pink and purple

@@ -57,23 +57,26 @@ export default function Projects() {
     const projects = [legoClone, starWarsApi, weatherApp, restaurantSite]; 
 
     return (
-        <>
-            <div className='py-20 text-white'>
-                <h2 className='font-serif text-3xl font-extrabold text-center text-white underline underline-offset-8'>Projects</h2>
+        <div className='flex flex-row justify-center'>
+            <div className='w-full max-w-5xl px-6 py-20 text-white xs:px-10'>
+                <div className='mb-4'>
+                    <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8'>Projects</h2>
+                    <span className='text-xl text-[#15ebd9] sm:text-2xl'>Check out what I've built!</span>
+                </div>
                 <div className='grid items-center justify-center grid-cols-1 px-6 mx-auto mt-20 gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-4xl md:gap-12 lg:gap-20'>
                     {projects.map(project => {
                         return <ProjectCard key={project.id} project={project} />
                     })}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
 const ProjectCard = ({ project }) => {
     return (
         <>
-            <div className='flex flex-col items-center justify-center px-4 pt-4 pb-6 text-slate-100 bg-[#1E293B] shadow-lg rounded-xl'>
+            <div className='flex flex-col items-center justify-center px-4 pt-4 pb-6 text-slate-100 bg-[#0E131F] shadow-lg rounded-xl md:px-6 lg:px-8'>
                 <div className='w-full py-4 font-medium text-[#15ebd9]'>
                     <span className='text-sm'>{project.type}</span>
                 </div>

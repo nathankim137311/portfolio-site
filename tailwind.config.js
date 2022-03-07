@@ -11,10 +11,12 @@ module.exports = {
       fontFamily: {
         'monoton': ['Monoton', 'sans-serif'],
       },
-      backgroundImage: {        
+      backgroundImage: {    
+        'plus': "url('./assets/svg/plus.svg')",    
+        'architect': "url('./assets/svg/architect.svg')",   
+        'falling-triangles': "url('./assets/svg/falling-triangles.svg')",    
         'clouds-pattern': "url('./assets/svg/endless-clouds.svg')",
         'glamorous': "url('./assets/svg/glamorous.svg')",
-        'lego-clone': "url('./assets/png/lego-clone-home.png')"
       },
     },
   },
