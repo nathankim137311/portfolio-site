@@ -53,13 +53,13 @@ export default function Contact() {
                     </button>
                     <div className='flex items-center justify-between px-4 py-3 text-white bg-gray-900 rounded-full w-fit'>
                         <Link to='https://github.com/nathankim137311'>
-                            <BsGithub className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#15ebd9]'/>
+                            <BsGithub className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#ED018C] hover:scale-110'/>
                         </Link>
                         <Link to='https://www.linkedin.com/in/nathan-kim-826a25230/'>
-                            <BsLinkedin className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#15ebd9]'/>
+                            <BsLinkedin className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#ED018C] hover:scale-110'/>
                         </Link>
                         <Link to='https://twitter.com/underdawg347'>
-                            <BsTwitter className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#15ebd9]'/>
+                            <BsTwitter className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#ED018C] hover:scale-110'/>
                         </Link>
                     </div>
                 </div>

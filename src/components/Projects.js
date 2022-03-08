@@ -57,23 +57,26 @@ export default function Projects() {
     const projects = [legoClone, starWarsApi, weatherApp, restaurantSite]; 
 
     return (
-        <>
-            <div className='py-20 text-white'>
-                <h2 className='font-serif text-3xl font-extrabold text-center text-white underline underline-offset-8'>Projects</h2>
-                <div className='grid items-center justify-center grid-cols-1 px-6 mx-auto mt-20 gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-4xl md:gap-12 lg:gap-20'>
+        <div className='flex flex-row justify-center'>
+            <div className='w-full max-w-5xl px-6 py-20 text-white xs:px-10'>
+                <div className='mb-4'>
+                    <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8 decoration-2'>Projects</h2>
+                    <span className='text-xl text-[#15ebd9] sm:text-2xl'>Check out what I've built!</span>
+                </div>
+                <div className='grid items-center justify-center grid-cols-1 px-6 mx-auto mt-20 gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-4xl md:gap-12 lg:gap-20 bg-[#0E131F]'>
                     {projects.map(project => {
                         return <ProjectCard key={project.id} project={project} />
                     })}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
 const ProjectCard = ({ project }) => {
     return (
         <>
-            <div className='flex flex-col items-center justify-center px-4 pt-4 pb-6 text-slate-100 bg-[#1E293B] shadow-lg rounded-xl'>
+            <div className='flex flex-col items-center justify-center px-4 pt-4 pb-6 text-slate-100 bg-[#0E131F] shadow-lg rounded-xl md:px-6 lg:px-8'>
                 <div className='w-full py-4 font-medium text-[#15ebd9]'>
                     <span className='text-sm'>{project.type}</span>
                 </div>
@@ -92,7 +95,7 @@ const ProjectCard = ({ project }) => {
                 </div>
                 <div className='flex items-center justify-between w-full py-6'>
                     <a href={project.github_url} target='_blank' rel='noreferrer'>
-                        <BsGithub className='w-6 h-6 text-white transition-all duration-200 ease-linear hover:text-[#15ebd9] md:w-7 md:h-7'/>
+                        <BsGithub className='w-6 h-6 text-white transition-all duration-200 ease-linear hover:text-[#ED018C] md:w-7 md:h-7'/>
                     </a>
                     <a href={project.live_url} className='bg-[#A400FF] text-sm py-2 rounded-md px-4 shadow-lg md:text-base hover:scale-105 transition-all duration-150 ease-linear active:bg-[#be44ff]'>
                         Live site
