@@ -20,16 +20,16 @@ export default function NavBar() {
             </button>
             <nav className='hidden w-1/2 md:block'>
                 <ul className='flex'>
-                    <li className='hover:underline underline-offset-8 decoration-2 decoration-[#15ebd9] w-1/2'>
+                    <li className='hover:underline underline-offset-8 decoration-[3px] decoration-[#15ebd9] w-1/2'>
                       <Link className='block w-full text-right' to=''>Skills</Link>
                     </li>
-                    <li className='hover:underline underline-offset-8 decoration-2 decoration-[#15ebd9] w-1/2'>
+                    <li className='hover:underline underline-offset-8 decoration-[3px] decoration-[#15ebd9] w-1/2'>
                       <Link className='block w-full text-right' to=''>About</Link>
                     </li>
-                    <li className='hover:underline underline-offset-8 decoration-2 decoration-[#15ebd9] w-1/2'>
+                    <li className='hover:underline underline-offset-8 decoration-[3px] decoration-[#15ebd9] w-1/2'>
                       <Link className='block w-full text-right' to=''>Projects</Link>
                     </li>
-                    <li className='hover:underline underline-offset-8 decoration-2 decoration-[#15ebd9] w-1/2'>
+                    <li className='hover:underline underline-offset-8 decoration-[3px] decoration-[#15ebd9] w-1/2'>
                       <Link className='block w-full text-right' to=''>Contact</Link>
                     </li>
                 </ul>

@@ -19,13 +19,13 @@ export default function Intro() {
           <button className='w-1/2 mr-4 md:mr-8 purple-btn hover:scale-105'>Contact</button>
           <div className='flex px-2 py-2 bg-gray-900 rounded-full md:px-4 md:py-3'>
             <Link to='https://github.com/nathankim137311'>
-              <BsGithub className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#15ebd9]'/>
+              <BsGithub className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#ED018C] hover:scale-110'/>
             </Link>
             <Link to='https://www.linkedin.com/in/nathan-kim-826a25230/'>
-              <BsLinkedin className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#15ebd9]'/>
+              <BsLinkedin className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#ED018C] hover:scale-110'/>
             </Link>
             <Link to='https://twitter.com/underdawg347'>
-              <BsTwitter className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#15ebd9]'/>
+              <BsTwitter className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-[#ED018C] hover:scale-110'/>
             </Link>
           </div>
         </div>

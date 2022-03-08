@@ -60,10 +60,10 @@ export default function Projects() {
         <div className='flex flex-row justify-center'>
             <div className='w-full max-w-5xl px-6 py-20 text-white xs:px-10'>
                 <div className='mb-4'>
-                    <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8'>Projects</h2>
+                    <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8 decoration-2'>Projects</h2>
                     <span className='text-xl text-[#15ebd9] sm:text-2xl'>Check out what I've built!</span>
                 </div>
-                <div className='grid items-center justify-center grid-cols-1 px-6 mx-auto mt-20 gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-4xl md:gap-12 lg:gap-20'>
+                <div className='grid items-center justify-center grid-cols-1 px-6 mx-auto mt-20 gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-4xl md:gap-12 lg:gap-20 bg-[#0E131F]'>
                     {projects.map(project => {
                         return <ProjectCard key={project.id} project={project} />
                     })}
@@ -95,7 +95,7 @@ const ProjectCard = ({ project }) => {
                 </div>
                 <div className='flex items-center justify-between w-full py-6'>
                     <a href={project.github_url} target='_blank' rel='noreferrer'>
-                        <BsGithub className='w-6 h-6 text-white transition-all duration-200 ease-linear hover:text-[#15ebd9] md:w-7 md:h-7'/>
+                        <BsGithub className='w-6 h-6 text-white transition-all duration-200 ease-linear hover:text-[#ED018C] md:w-7 md:h-7'/>
                     </a>
                     <a href={project.live_url} className='bg-[#A400FF] text-sm py-2 rounded-md px-4 shadow-lg md:text-base hover:scale-105 transition-all duration-150 ease-linear active:bg-[#be44ff]'>
                         Live site
