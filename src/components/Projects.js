@@ -15,7 +15,7 @@ export default function Projects() {
         live_url: 'https://lego-clone.herokuapp.com/',
         github_url: 'https://github.com/nathankim137311/lego-store',
         type: 'E-COMMERCE',
-        description: 'A clone of the Lego.com which features: authentication / authorization with JWT, mobile-responsive design, a functional shopping cart, Stripe-Integration and multiple pages of navigation.'
+        description: 'An e-commerce application that has all the features you would want!'
     }
 
     const starWarsApi = {
@@ -51,7 +51,7 @@ export default function Projects() {
         live_url: 'https://nathankim137311.github.io/restaurant-page/',
         github_url: 'https://github.com/nathankim137311/restaurant-page',
         type: 'MPA',
-        description: 'A simple restaurant site with multiple pages of navigation utilizing Google Maps API.'
+        description: 'A custom-designed restaurant site that utilizes Google Maps API.'
     }
 
     const projects = [legoClone, starWarsApi, weatherApp, restaurantSite]; 
@@ -63,11 +63,15 @@ export default function Projects() {
                     <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8 decoration-2'>Projects</h2>
                     <span className='text-xl text-[#15ebd9] sm:text-2xl'>Check out what I've built!</span>
                 </div>
-                <div className='grid items-center justify-center grid-cols-1 px-6 mx-auto mt-20 gap-x-6 gap-y-12 xs:grid-cols-2 w-fit grid-row-4 xs:grid-rows-2 md:max-w-4xl md:gap-12 lg:gap-20 bg-[#0E131F]'>
+                <ul className='bg-transparent'>
                     {projects.map(project => {
-                        return <ProjectCard key={project.id} project={project} />
+                        return (
+                            <li key={project.id}>
+                                <ProjectCard project={project} />
+                            </li>
+                        )
                     })}
-                </div>
+                </ul>
             </div>
         </div>
     )
@@ -76,32 +80,37 @@ export default function Projects() {
 const ProjectCard = ({ project }) => {
     return (
         <>
-            <div className='flex flex-col items-center justify-center px-4 pt-4 pb-6 text-slate-100 bg-[#0E131F] shadow-lg rounded-xl md:px-6 lg:px-8'>
-                <div className='w-full py-4 font-medium text-[#15ebd9]'>
-                    <span className='text-sm'>{project.type}</span>
+            <div className='px-4 py-8 border-b-2 border-slate-800 text-slate-300 md:flex md:flex-row md:items-center md:px-6 bg-[#0E131F] mb-16'>
+                <div className='md:w-1/2'>
+                    <div>
+                        <span className='text-[.85rem] text-[#15ebd9]'>{project.type}</span>
+                        <h2 className='mb-2 text-base font-bold text-white md:text-2xl'>{project.title}</h2>
+                    </div>
+                    <div className='h-32 my-4 sm:h-40 md:h-56 opacity-80'>
+                        <a href={project.live_url}>
+                            <img className='object-cover object-top w-full h-full rounded-md shadow-lg' src={project.img_url} alt="" />
+                        </a>
+                    </div>
                 </div>
-                <div className='w-full h-32 md:h-44 lg:h-52'>
-                    <a href={project.live_url}>
-                        <img className='object-cover object-top w-full h-full rounded shadow-lg opacity-75' src={ project.img_url } alt="" />
-                    </a>
+                <div className='md:w-1/2 md:pl-6'>
+                    <div className='mb-2'>
+                        <a href={project.live_url}>
+                            <h2 className='mb-2 text-base font-bold text-white md:text-xl md:hidden'>{project.title}</h2>
+                        </a>
+                        <p className='h-20 overflow-hidden md:h-16 md:text-lg md:text-justify'>{project.description}</p>
+                    </div>
+                    <div className='flex flex-row items-center mb-4'>
+                        <a className='transition-all duration-200 ease-linear text-white hover:text-[#ED018C] hover:scale-110' href={project.github_url}>
+                            <BsGithub className='w-6 h-6 mr-6 md:w-7 md:h-7' />
+                        </a>
+                        <a className='bg-[#A400FF] hover:scale-105 text-white px-3 py-1 rounded-md shadow outline-none active:bg-[#be44ff] hover:shadow-lg focus:outline-none font-bold text-base md:px-5 md:py-2' href={project.live_url}>
+                            Live
+                        </a>
+                    </div>
+                    <div>
+                        <span className='text-sm text-slate-500'>{project.tech}</span>
+                    </div>
                 </div>
-                <div className='flex flex-col items-start w-full py-4'>
-                    <a className='w-full font-bold text-white xxs:text-xl md:text-2xl' href={project.live_url} target='_blank' rel='noreferrer'>
-                        {project.title}
-                    </a>
-                </div>
-                <div className='h-20 py-2 overflow-hidden leading-6 text-left text-slate-300 md:text-lg'>
-                    <p>{project.description}</p>
-                </div>
-                <div className='flex items-center justify-between w-full py-6'>
-                    <a href={project.github_url} target='_blank' rel='noreferrer'>
-                        <BsGithub className='w-6 h-6 text-white transition-all duration-200 ease-linear hover:text-[#ED018C] md:w-7 md:h-7'/>
-                    </a>
-                    <a href={project.live_url} className='bg-[#A400FF] text-sm py-2 rounded-md px-4 shadow-lg md:text-base hover:scale-105 transition-all duration-150 ease-linear active:bg-[#be44ff]'>
-                        Live site
-                    </a>
-                </div>
-                <small className='h-12 text-justify text-slate-400 md:text-base'>{project.tech}</small>
             </div>
         </>
     )
