@@ -19,7 +19,7 @@ export default function Skills() {
                 <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8 decoration-2'>Skills</h2>
                 <span className='text-xl sm:text-2xl text-[#15ebd9]'>Technologies and languages</span>
             </div>
-            <div className='w-full px-6 xs:px-12 sm:px-16 py-12 bg-[#0E131F] flex flex-row justify-center shadow-lg'>
+            <div className='w-full px-6 xs:px-12 sm:px-16 py-12 bg-[#0E131F] flex flex-row justify-center shadow-lg rounded-xl'>
                 <ul className='grid w-full max-w-4xl grid-cols-2 text-sm text-slate-200 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-y-12'>
                     <li className='flex flex-col items-center'>
                         <div className='skill-badge bg-[#E44D26] text-white'>

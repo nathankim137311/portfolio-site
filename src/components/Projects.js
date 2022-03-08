@@ -80,7 +80,7 @@ export default function Projects() {
 const ProjectCard = ({ project }) => {
     return (
         <>
-            <div className='px-4 py-8 border-b-2 border-slate-800 text-slate-300 md:flex md:flex-row md:items-center md:px-6 bg-[#0E131F] mb-16'>
+            <div className='px-4 py-8 border-2 border-slate-800 text-slate-300 md:flex md:flex-row md:items-center md:px-6 bg-[#0E131F] mb-16 rounded-xl'>
                 <div className='md:w-1/2'>
                     <div>
                         <span className='text-[.85rem] text-[#15ebd9]'>{project.type}</span>

@@ -7,7 +7,13 @@ const endpoint = 'https://public.herotofu.com/v1/3e818700-9b39-11ec-bdf8-dd9c99f
 
 export default function Contact() {    
   return (
-    <div className='flex flex-col justify-center h-screen'>
+    <div className='flex flex-col items-center justify-center h-screen'>
+        <div className='w-full max-w-5xl'>
+            <div className='w-full px-10 mb-4'>
+                <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8 decoration-2'>Contact</h2>
+                <span className='text-xl text-[#15ebd9] sm:text-2xl'>Let's chat!</span>
+            </div>
+        </div>
         <div className='w-full px-6 xs:mx-auto xs:max-w-md'>
             <div className='flex justify-center w-auto'>
                 <MdEmail className='w-auto h-20 mb-8 text-white shadow-md' />
@@ -21,7 +27,7 @@ export default function Contact() {
                 <div className='mb-6 xs:mb-8'>
                     <input 
                         type="text" 
-                        placeholder='Your name'
+                        placeholder='Your name *'
                         name='name'
                         className='contact-input'
                         required
@@ -30,7 +36,7 @@ export default function Contact() {
                 <div className='mb-6 xs:mb-8'>
                     <input 
                         type="email" 
-                        placeholder='Your email'
+                        placeholder='Your email *'
                         name='email'
                         className='contact-input'
                         required
@@ -38,7 +44,7 @@ export default function Contact() {
                 </div>
                 <div className='mb-8 xs:h-20 xs:mb-10'>
                     <textarea
-                        placeholder='Your message'
+                        placeholder='Your message *'
                         name='message'
                         className='h-full contact-input' 
                         required
