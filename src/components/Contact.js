@@ -7,7 +7,7 @@ const endpoint = 'https://public.herotofu.com/v1/3e818700-9b39-11ec-bdf8-dd9c99f
 
 export default function Contact() {    
   return (
-    <div className='flex flex-col items-center justify-center h-screen'>
+    <div id='contact' className='flex flex-col items-center justify-center h-screen'>
         <div className='w-full max-w-5xl'>
             <div className='w-full px-10 mb-4'>
                 <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8 decoration-2'>Contact</h2>

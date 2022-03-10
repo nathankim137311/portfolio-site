@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon, } from '@heroicons/react/outline';
 import { EmojiHappyIcon, DocumentTextIcon, CollectionIcon, PhoneIcon } from '@heroicons/react/solid';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 export default function NavBar() {
   const [active, setActive] = useState(false);
@@ -9,8 +9,6 @@ export default function NavBar() {
   const toggleMenu = () => {
     setActive(!active);
   }
-
-  const scrollToElement = () => {}
 
   return (
     <>
@@ -22,18 +20,18 @@ export default function NavBar() {
             </button>
             <nav className='hidden w-1/2 md:block'>
                 <ul className='flex'>
-                    <li className='hover:underline underline-offset-8 decoration-[3px] decoration-[#15ebd9] w-1/2'>
+                    <li className='hover:text-[#15ebd9] transition-all ease-linear duration-200 w-1/2'>
                       <Link
-                      className='block w-full text-right' to=''>Skills</Link>
+                      className='block w-full text-right hover:cursor-pointer' to='skills' spy={true} smooth={true}>Skills</Link>
                     </li>
-                    <li className='hover:underline underline-offset-8 decoration-[3px] decoration-[#15ebd9] w-1/2'>
-                      <Link className='block w-full text-right' to=''>About</Link>
+                    <li className='hover:text-[#15ebd9] transition-all ease-linear duration-200 w-1/2'>
+                      <Link className='block w-full text-right hover:cursor-pointer' to='about' spy={true} smooth={true}>About</Link>
                     </li>
-                    <li className='hover:underline underline-offset-8 decoration-[3px] decoration-[#15ebd9] w-1/2'>
-                      <Link className='block w-full text-right' to=''>Projects</Link>
+                    <li className='hover:text-[#15ebd9] transition-all ease-linear duration-200 w-1/2'>
+                      <Link className='block w-full text-right hover:cursor-pointer' to='projects' spy={true} smooth={true} >Projects</Link>
                     </li>
-                    <li className='hover:underline underline-offset-8 decoration-[3px] decoration-[#15ebd9] w-1/2'>
-                      <Link className='block w-full text-right' to=''>Contact</Link>
+                    <li className='hover:text-[#15ebd9] transition-all ease-linear duration-200 w-1/2'>
+                      <Link className='block w-full text-right hover:cursor-pointer' to='contact' spy={true} smooth={true}>Contact</Link>
                     </li>
                 </ul>
             </nav>

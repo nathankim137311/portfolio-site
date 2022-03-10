@@ -13,7 +13,7 @@ import { IoLogoNodejs } from 'react-icons/io'
 
 export default function Skills() {
   return (
-    <div className='relative h-screen bg-architect'>
+    <div id='skills' className='relative h-screen bg-architect'>
         <div className='absolute flex flex-col items-center w-full max-w-5xl px-6 py-12 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 sm:px-10'>
             <div className='w-full mb-4'>
                 <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8 decoration-2'>Skills</h2>

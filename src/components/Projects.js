@@ -57,7 +57,7 @@ export default function Projects() {
     const projects = [legoClone, starWarsApi, weatherApp, restaurantSite]; 
 
     return (
-        <div className='flex flex-row justify-center'>
+        <div id='projects' className='flex flex-row justify-center'>
             <div className='w-full max-w-5xl px-6 py-20 text-white xs:px-10'>
                 <div className='mb-4'>
                     <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8 decoration-2'>Projects</h2>
@@ -84,7 +84,9 @@ const ProjectCard = ({ project }) => {
                 <div className='md:w-1/2'>
                     <div>
                         <span className='text-[.85rem] text-[#15ebd9]'>{project.type}</span>
-                        <h2 className='mb-2 text-base font-bold text-white md:text-2xl'>{project.title}</h2>
+                        <a href={project.live_url}>
+                            <h2 className='mb-2 text-base font-bold text-white md:text-2xl'>{project.title}</h2>
+                        </a>
                     </div>
                     <div className='h-32 my-4 sm:h-40 md:h-56 opacity-80'>
                         <a href={project.live_url}>
