@@ -1,15 +1,11 @@
 import React from 'react';
-import NavBar from './NavBar';
 import { Link } from 'react-router-dom';
 import { BsLinkedin, BsGithub, BsTwitter } from 'react-icons/bs';
 import arrowDown from '../assets/gif/arrow-down.gif';
-// import Particles from 'react-tsparticles';
-// import particleConfig from '../config/particle';
 
 export default function Intro() {
   return (
     <div className='relative flex flex-col justify-center h-screen'>
-      {/* <Particles id='space-particles' className='absolute top-0 bottom-0 left-0 right-0' params={particleConfig} /> */}
       <div className='flex flex-col items-start px-6 text-white xs:items-center xs:max-w-2xl sm:mx-auto z-[1]'>
         <div>
           <h1 className='text-5xl font-monoton xs:text-center'>Nathan Kim.</h1>
@@ -31,7 +27,6 @@ export default function Intro() {
         </div>
       </div>
       <img className='absolute w-12 h-auto -translate-x-1/2 md:w-16 bottom-10 left-1/2' src={arrowDown} alt="Animated down arrow" />
-      <NavBar />
     </div>
   )
 }

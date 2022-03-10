@@ -1,19 +1,20 @@
 import React from 'react';
-import Avatar from '../assets/png/myAvatar.png';
 
 export default function About() {
   return (
     <div className='text-white'>
-        <div className='px-6 max-w-[578px] xs:mx-auto py-20 shadow-lg'>
-            <h2 className='mb-20 font-serif text-3xl font-extrabold text-center text-white underline underline-offset-8'>About</h2>
-            <div className='bg-[#151c29] rounded-xl px-4 py-10 xs:py-14 xs:px-8'>
-                <div className='flex flex-row justify-center mb-10'>
-                    <img className='w-40 h-40 border-2 border-white rounded-md shadow-md xs:w-48 xs:h-48' src={Avatar} alt="" />
+        <div className='max-w-5xl px-6 py-20 shadow-lg xs:px-10 xs:mx-auto'>
+                <div className='mb-4'>
+                    <h2 className='w-full mb-4 font-serif text-base font-extrabold text-left text-white underline underline-offset-8 decoration-2'>About</h2>
+                    <span className='text-xl text-[#15ebd9] sm:text-2xl'>Background info</span>
                 </div>
-                <span className='block w-full mb-4 text-sm font-bold text-center xs:text-base'>Based in Bothell, WA</span>
-                <div className='xxs:text-base xs:text-lg text-slate-300 '>
-                    <p className='mb-4 text-left xs:mb-6'>Nathan Kim is a who has a thirst for all things programming. He has went from not having written a single line of code to creating his own full stack project in five months. He is a <strong className='text-[#15ebd9]'>creative and logical person</strong>, who has an eye for design.</p>
-                    <p className='mb-4 text-left xs:mb-6'>When he is not coding, he spends his free time hanging out with friends on Discord, working out and watching football.</p>
+            <div className='bg-[#0E131F] rounded-xl px-4 py-10 xs:py-14 xs:px-8'>
+                <div className='text-base xs:text-lg text-slate-300 md:text-xl'>
+                    <p className='mb-4 text-left xs:mb-6'>I am a software developer that has a background in digital art. I combine my skills as an artist and my passion for technology to make my ideas come to life. I am a builder, I always have been. From playing with legos, painting on canvas, or typing lines of code on an IDE, I love creating and that is my passion.</p>
+                    <p className='mb-4 text-left xs:mb-6'>
+                    Programming allows me to build for the future, and that makes me super excited. I want to be working with cutting-edge technology and building tools that will solve future problems. The most fufilling thing about programming is manifesting your vision and your ideas. Software gives value to people. That's why I am passionate about programming. 
+                    </p>
+                    <p className='mb-4 text-left xs:mb-6'>When I am not coding, I like to hang out with friends on Discord, go to the gym, and create art.</p>
                     <p className='border-l-4 border-[#15ebd9] px-3 py-2 bg-[#000A21] text-gray-400 xs:py-4 xs:px-6'>I wish I could by me a spaceship and fly past the sky - Kanye West</p>
                 </div>
             </div>

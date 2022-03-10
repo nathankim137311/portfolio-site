@@ -10,6 +10,8 @@ export default function NavBar() {
     setActive(!active);
   }
 
+  const scrollToElement = () => {}
+
   return (
     <>
       <header className='fixed top-0 w-full px-6 py-4 text-white bg-[#030406] sm:px-10 sm:py-6 z-10'>
@@ -21,7 +23,8 @@ export default function NavBar() {
             <nav className='hidden w-1/2 md:block'>
                 <ul className='flex'>
                     <li className='hover:underline underline-offset-8 decoration-[3px] decoration-[#15ebd9] w-1/2'>
-                      <Link className='block w-full text-right' to=''>Skills</Link>
+                      <Link
+                      className='block w-full text-right' to=''>Skills</Link>
                     </li>
                     <li className='hover:underline underline-offset-8 decoration-[3px] decoration-[#15ebd9] w-1/2'>
                       <Link className='block w-full text-right' to=''>About</Link>
