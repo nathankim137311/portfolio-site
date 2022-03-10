@@ -52,7 +52,7 @@ export default function Contact() {
                 </div>
                 <div className="flex flex-col items-center w-full">
                     <button
-                        className="mb-8 px-6 py-2 xxs:w-full text-base font-bold md:text-lg text-slate-300 transition-all duration-150 ease-linear rounded-lg shadow outline-none active:bg-[#be44ff] hover:shadow-lg focus:outline-none border-2 border-[#A400FF]"
+                        className="mb-8 px-6 py-2 xxs:w-full text-base font-bold md:text-lg text-slate-300 transition-all duration-150 ease-linear rounded-lg shadow outline-none active:bg-[#be44ff] hover:shadow-lg focus:outline-none bg-[#ED018C]"
                         type="submit"
                     >
                         Send a message
