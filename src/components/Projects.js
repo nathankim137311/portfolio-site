@@ -61,7 +61,7 @@ export default function Projects() {
             <div className='w-full max-w-5xl px-6 py-20 text-white xs:px-10'>
                 <div className='mb-4'>
                     <h2 className='w-full mb-4 text-base font-normal text-left underline font-archivo underline-offset-8 decoration-2 text-slate-500'>Projects</h2>
-                    <span className='text-xl text-[#DF00FE] font-bold sm:text-2xl'>Check out what I've built!</span>
+                    <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Check out what I've built!</span>
                 </div>
                 <ul className='bg-transparent'>
                     {projects.map(project => {

@@ -9,9 +9,9 @@ export default function Contact() {
   return (
     <div id='contact' className='flex flex-col items-center justify-center h-screen'>
         <div className='w-full max-w-5xl'>
-            <div className='w-full px-10 mb-4'>
+            <div className='w-full px-6 mb-4 xs:px-10'>
                 <h2 className='w-full mb-4 text-base font-normal text-left underline text-slate-500 font-archivo underline-offset-8 decoration-2'>Contact</h2>
-                <span className='text-xl text-[#DF00FE] font-bold sm:text-2xl'>Let's chat!</span>
+                <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Let's chat!</span>
             </div>
         </div>
         <div className='w-full px-6 xs:mx-auto xs:max-w-md'>

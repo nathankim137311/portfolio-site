@@ -17,7 +17,7 @@ export default function Skills() {
         <div className='absolute flex flex-col items-center w-full max-w-5xl px-6 py-12 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 sm:px-10'>
             <div className='w-full mb-4'>
                 <h2 className='w-full mb-4 text-base font-normal text-left underline text-slate-500 font-archivo underline-offset-8 decoration-2'>Skills</h2>
-                <span className='text-xl sm:text-2xl text-[#DF00FE] font-bold'>Technologies and languages</span>
+                <span className='text-xl font-bold sm:text-2xl text-slate-100'>Technologies and languages</span>
             </div>
             <div className='w-full px-6 xs:px-12 sm:px-16 py-12 bg-[#0E131F] flex flex-row justify-center shadow-lg rounded-xl'>
                 <ul className='grid w-full max-w-4xl grid-cols-2 text-sm text-slate-200 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-y-12'>

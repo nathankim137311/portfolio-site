@@ -6,7 +6,7 @@ export default function About() {
         <div className='max-w-5xl px-6 py-20 shadow-lg xs:px-10 xs:mx-auto'>
                 <div className='mb-4'>
                     <h2 className='w-full mb-4 text-base font-normal text-left underline text-slate-500 underline-offset-8 decoration-2 font-archivo'>About</h2>
-                    <span className='text-xl text-[#DF00FE] font-bold sm:text-2xl'>Get to know me!</span>
+                    <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Get to know me!</span>
                 </div>
             <div className='bg-[#0E131F] rounded-xl px-4 py-10 xs:py-14 xs:px-8'>
                 <div className='text-base xs:text-lg text-slate-300 md:text-xl'>
