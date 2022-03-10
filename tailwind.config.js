@@ -10,6 +10,7 @@ module.exports = {
       },
       fontFamily: {
         'monoton': ['Monoton', 'sans-serif'],
+        'archivo': ['Archivo Black', 'sans-serif']
       },
       backgroundImage: {    
         'plus': "url('./assets/svg/plus.svg')",    
