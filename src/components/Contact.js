@@ -1,20 +1,78 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MdEmail } from 'react-icons/md';
 import { Link } from 'react-router-dom'; 
 import { BsLinkedin, BsGithub, BsTwitter } from 'react-icons/bs';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const endpoint = 'https://public.herotofu.com/v1/3e818700-9b39-11ec-bdf8-dd9c99f898ec'; 
 
-export default function Contact() {    
+export default function Contact() {   
+    const {ref, inView} = useInView();
+
+    const headingControls = useAnimation();
+    const formControls = useAnimation();
+
+    useEffect(() => {
+        const sequence = async () => {
+            await headingControls.start(heading.show);
+            await formControls.start(form.show); 
+        }
+
+        if (inView) {
+            sequence();
+        }
+
+    }, [inView])
+
+    const heading = {
+        hidden: {
+            opacity: 0,
+            y: -50
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.5,
+                duration: .75,
+                type: 'spring'
+            }
+        }
+    }
+
+    const form = {
+        hidden: {
+            opacity: 0,
+        },
+        show: {
+            opacity: 1,
+            transition: {
+                duration: 1,
+                type: 'spring'
+            }
+        }
+    }
+    
   return (
-    <div id='contact' className='flex flex-col items-center justify-center h-screen'>
+    <div ref={ref} id='contact' className='flex flex-col items-center justify-center h-screen'>
         <div className='w-full max-w-5xl'>
-            <div className='w-full px-6 mb-4 xs:px-10'>
+            <motion.div 
+                initial='hidden'
+                animate={headingControls}
+                variants={heading}
+                className='w-full px-6 mb-4 xs:px-10'
+            >
                 <h2 className='w-full mb-4 text-base font-normal text-left underline text-slate-500 font-archivo underline-offset-8 decoration-2'>Contact</h2>
                 <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Let's chat!</span>
-            </div>
+            </motion.div>
         </div>
-        <div className='w-full px-6 xs:mx-auto xs:max-w-md'>
+        <motion.div 
+            initial='hidden'
+            animate={formControls}
+            variants={form}
+            className='w-full px-6 xs:mx-auto xs:max-w-md'
+        >
             <div className='flex justify-center w-auto'>
                 <MdEmail className='w-auto h-20 mb-8 shadow-md text-slate-100' />
             </div>
@@ -52,7 +110,7 @@ export default function Contact() {
                 </div>
                 <div className="flex flex-col items-center w-full">
                     <button
-                        className="mb-8 px-6 py-2 xxs:w-full text-base font-bold md:text-lg text-slate-300 transition-all duration-150 ease-linear rounded-lg shadow outline-none active:bg-[#be44ff] hover:shadow-lg focus:outline-none border-2 border-[#A400FF]"
+                        className="mb-8 px-6 py-2 xxs:w-full text-base font-bold md:text-lg text-slate-200 transition-all duration-150 ease-linear rounded-lg shadow outline-none active:bg-[#be44ff] hover:shadow-lg focus:outline-none bg-[#ED018C]"
                         type="submit"
                     >
                         Send a message
@@ -70,7 +128,7 @@ export default function Contact() {
                     </div>
                 </div>
             </form>
-        </div>
+        </motion.div>
     </div>
     )
 }

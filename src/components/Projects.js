@@ -1,77 +1,103 @@
-import React from 'react';
-import legoCloneHome from '../assets/png/lego-clone-home.png';
-import starWarsApiImg from '../assets/png/lego-star-wars-api.png';
-import weatherAppImg from '../assets/png/weather-app.png';
-import restaurantSiteImg from '../assets/png/korean-street.png';
+import React, { useEffect } from 'react';
 import { BsGithub } from 'react-icons/bs';
+import { projects } from '../config/projectsArr';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function Projects() {
-    const legoClone = {
-        id: 1,
-        title: 'Lego Clone',
-        query: 'lego-clone',
-        img_url: legoCloneHome,
-        tech: 'MongoDB | Express | React | Node | Git | TailwindCSS',
-        live_url: 'https://lego-clone.herokuapp.com/',
-        github_url: 'https://github.com/nathankim137311/lego-store',
-        type: 'E-COMMERCE',
-        description: 'An e-commerce application that has all the features you would want!'
+    const {ref, inView} = useInView();
+    
+    const headingControls = useAnimation();
+    const listControls = useAnimation();
+    const itemControls = useAnimation();
+
+    const projectsArr = projects; 
+
+    useEffect(() => {
+        const sequence = async () => {
+            await headingControls.start(heading.show);
+            await listControls.start(list.show);
+            return await itemControls.start(item.show);
+        }
+
+        if(inView) {
+            sequence();
+        }
+        
+    }, [inView])
+
+    const heading = {
+        hidden: {
+            opacity: 0,
+            y: -50
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.5,
+                duration: .75,
+                type: 'spring'
+            }
+        }
     }
 
-    const starWarsApi = {
-        id: 2,
-        title: 'Lego Star Wars API',
-        query: 'lego-star-wars-api',
-        img_url: starWarsApiImg,
-        tech: 'MongoDB | Express | Node | Git | Postman',
-        live_url: 'https://rapidapi.com/nathankim137311/api/lego-star-wars-sets/',
-        github_url: 'https://github.com/nathankim137311/lego-starwars-api',
-        type: 'REST API',
-        description: 'A RESTful API that serves product data from Lego.com.'
+    const list = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                duration: .5,
+                type: 'spring',
+                delay: 0
+            }
+        }
     }
 
-    const weatherApp = {
-        id: 3,
-        title: 'Weather App',
-        query: 'weather-app',
-        img_url: weatherAppImg,
-        tech: 'HTML | SCSS | JavaScript | Git | Postman',
-        live_url: 'https://nathankim137311.github.io/weather-app/',
-        github_url: 'https://github.com/nathankim137311/weather-app',
-        type: 'SPA',
-        description: 'A simple weather app that fetches current weather forecast based on city.'
+    const item = {
+        hidden: { opacity: 0, x: -100  },
+        show: index =>  ({
+            opacity: 1,
+            x: 0,
+            transition: {
+                delay: index * .5,
+                type: 'spring'
+            },
+        }),
     }
-
-    const restaurantSite = {
-        id: 4, 
-        title: 'Restaurant Site',
-        query: 'restaurant-site',
-        img_url: restaurantSiteImg,
-        tech: 'HTML | SCSS | JavaScript | Git | Webpack',
-        live_url: 'https://nathankim137311.github.io/restaurant-page/',
-        github_url: 'https://github.com/nathankim137311/restaurant-page',
-        type: 'MPA',
-        description: 'A custom-designed restaurant site that utilizes Google Maps API.'
-    }
-
-    const projects = [legoClone, starWarsApi, weatherApp, restaurantSite]; 
 
     return (
         <div id='projects' className='flex flex-row justify-center'>
-            <div className='w-full max-w-5xl px-6 py-20 text-white xs:px-10'>
-                <div className='mb-4'>
+            <div ref={ref} className='w-full max-w-5xl px-6 py-20 text-white xs:px-10'>
+                <motion.div 
+                    initial='hidden'
+                    animate={headingControls}
+                    variants={heading}
+                    className='mb-4'
+                >
                     <h2 className='w-full mb-4 text-base font-normal text-left underline font-archivo underline-offset-8 decoration-2 text-slate-500'>Projects</h2>
                     <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Check out what I've built!</span>
-                </div>
-                <ul className='bg-transparent'>
-                    {projects.map(project => {
+                </motion.div>
+                <motion.ul 
+                    initial='hidden'
+                    animate={listControls}
+                    variants={list}
+                    className='bg-transparent'
+                >
+                    {projectsArr.map((project, index) => {
                         return (
-                            <li key={project.id}>
+                            <motion.li
+                                custom={index}
+                                initial='hidden'
+                                animate={itemControls}
+                                variants={item}
+                                key={project.id}
+                            >
                                 <ProjectCard project={project} />
-                            </li>
+                            </motion.li>
                         )
                     })}
-                </ul>
+                </motion.ul>
             </div>
         </div>
     )
