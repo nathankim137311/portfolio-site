@@ -1,26 +1,101 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { projects } from '../config/projectsArr';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function Projects() {
+    const {ref, inView} = useInView();
+    const headingControls = useAnimation();
+    const listControls = useAnimation();
+    const itemControls = useAnimation();
+
     const projectsArr = projects; 
+
+    useEffect(() => {
+        const sequence = async () => {
+            await headingControls.start(container.show);
+            await listControls.start(list.show);
+            return await itemControls.start(item.show);
+        }
+
+        if(inView) {
+            sequence();
+        }
+        
+    }, [inView])
+
+    const container = {
+        hidden: {
+            opacity: 0,
+            y: -50
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: .75,
+                type: 'spring'
+            }
+        }
+    }
+
+    const list = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                duration: .5,
+                type: 'spring',
+                delay: 0
+            }
+        }
+    }
+
+    const item = {
+        hidden: { opacity: 0, x: -100  },
+        show: index =>  ({
+            opacity: 1,
+            x: 0,
+            transition: {
+                delay: index * .5,
+                type: 'spring'
+            },
+        }),
+    }
 
     return (
         <div id='projects' className='flex flex-row justify-center'>
-            <div className='w-full max-w-5xl px-6 py-20 text-white xs:px-10'>
-                <div className='mb-4'>
+            <div ref={ref} className='w-full max-w-5xl px-6 py-20 text-white xs:px-10'>
+                <motion.div 
+                    initial='hidden'
+                    animate={headingControls}
+                    variants={container}
+                    className='mb-4'
+                >
                     <h2 className='w-full mb-4 text-base font-normal text-left underline font-archivo underline-offset-8 decoration-2 text-slate-500'>Projects</h2>
                     <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Check out what I've built!</span>
-                </div>
-                <ul className='bg-transparent'>
-                    {projectsArr.map(project => {
+                </motion.div>
+                <motion.ul 
+                    initial='hidden'
+                    animate={listControls}
+                    variants={list}
+                    className='bg-transparent'
+                >
+                    {projectsArr.map((project, index) => {
                         return (
-                            <li key={project.id}>
+                            <motion.li
+                                custom={index}
+                                initial='hidden'
+                                animate={itemControls}
+                                variants={item}
+                                key={project.id}
+                            >
                                 <ProjectCard project={project} />
-                            </li>
+                            </motion.li>
                         )
                     })}
-                </ul>
+                </motion.ul>
             </div>
         </div>
     )
