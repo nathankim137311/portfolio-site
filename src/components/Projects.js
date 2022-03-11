@@ -106,10 +106,10 @@ export default function Projects() {
 const ProjectCard = ({ project }) => {
     return (
         <>
-            <div className='px-4 py-8 text-slate-300 md:flex md:flex-row md:items-center md:px-6 bg-[#0E131F] mb-16 rounded-xl'>
+            <div className='px-4 py-8 mb-16 text-slate-300 md:flex md:flex-row md:items-center md:px-6 bg-space rounded-xl'>
                 <div className='md:w-1/2'>
                     <div>
-                        <span className='text-[.85rem] text-[#ED018C]'>{project.type}</span>
+                        <span className='text-[.85rem] text-hotpink-200'>{project.type}</span>
                         <a href={project.live_url}>
                             <h2 className='mb-2 text-base font-bold text-white md:text-2xl'>{project.title}</h2>
                         </a>
@@ -128,10 +128,10 @@ const ProjectCard = ({ project }) => {
                         <p className='h-20 overflow-hidden md:h-16 md:text-lg md:text-justify'>{project.description}</p>
                     </div>
                     <div className='flex flex-row items-center mb-4'>
-                        <a className='transition-all duration-200 ease-linear text-slate-400 hover:text-[#15ebd9] hover:scale-110' href={project.github_url}>
+                        <a className='transition-all duration-200 ease-linear text-slate-400 hover:text-aqua hover:scale-110' href={project.github_url}>
                             <BsGithub className='w-6 h-6 mr-6 md:w-7 md:h-7' />
                         </a>
-                        <a className='bg-[#ED018C] hover:scale-105 text-white px-3 py-1 rounded-md shadow outline-none active:bg-[#be44ff] hover:shadow-lg focus:outline-none font-bold text-base md:px-5 md:py-2' href={project.live_url}>
+                        <a className='px-3 py-1 text-base font-bold text-white rounded-md shadow outline-none bg-hotpink-200 hover:scale-105 active:bg-hotpink-100 hover:shadow-lg focus:outline-none md:px-5 md:py-2' href={project.live_url}>
                             Live
                         </a>
                     </div>

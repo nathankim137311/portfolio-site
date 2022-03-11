@@ -99,7 +99,7 @@ export default function Skills() {
                 initial='hidden'
                 animate={containerControls}
                 variants={container}
-                className='w-full px-6 xs:px-12 sm:px-16 py-12 bg-[#0E131F] flex flex-row justify-center shadow-lg rounded-xl'
+                className='flex flex-row justify-center w-full px-6 py-12 shadow-lg xs:px-12 sm:px-16 bg-space rounded-xl'
             >
                 <motion.ul 
                     initial='hidden'
