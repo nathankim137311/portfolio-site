@@ -26,14 +26,13 @@ export default function Skills() {
                     type: 'spring',
                     ease: 'linear',
                     duration: .5,
-                    delay: .25
+                    delay: .35
                 }
             })
         }
         if(!inView) {
-            animation.start({ opacity: 0, x: '-100vw'});
+            animation.start({ opacity: 0, x: '-50vw'});
         }
-        console.log(inView);
     }, [inView])
 
     const list = {
