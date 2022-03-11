@@ -15,12 +15,9 @@ export default function About() {
                     type: 'spring',
                     ease: 'linear',
                     duration: .5,
-                    delay: .35
+                    delay: .45
                 }
             })
-        }
-        if(!inView) {
-            animation.start({ opacity: 0, x: '-50vw'});
         }
     }, [inView])
 
@@ -29,6 +26,7 @@ export default function About() {
     <div id='about' className='relative h-screen text-white'>
         <div ref={ref} className='absolute w-full max-w-5xl px-6 py-20 -translate-x-1/2 -translate-y-1/2 shadow-lg xs:px-10 xs:mx-auto left-1/2 top-1/2'>
             <motion.div 
+                initial={{ opacity: 0, x: '-50vw'}}
                 animate={animation}
                 className='mb-4'
             >
@@ -36,6 +34,7 @@ export default function About() {
                 <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Get to know me!</span>
             </motion.div>
             <motion.div 
+                initial={{ opacity: 0, x: '-50vw'}}
                 animate={animation}
                 className='bg-[#0E131F] rounded-xl px-4 py-10 xs:py-14 xs:px-8'
             >

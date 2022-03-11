@@ -1,60 +1,9 @@
 import React from 'react';
-import legoCloneHome from '../assets/png/lego-clone-home.png';
-import starWarsApiImg from '../assets/png/lego-star-wars-api.png';
-import weatherAppImg from '../assets/png/weather-app.png';
-import restaurantSiteImg from '../assets/png/korean-street.png';
 import { BsGithub } from 'react-icons/bs';
+import { projects } from '../config/projectsArr';
 
 export default function Projects() {
-    const legoClone = {
-        id: 1,
-        title: 'Lego Clone',
-        query: 'lego-clone',
-        img_url: legoCloneHome,
-        tech: 'MongoDB | Express | React | Node | Git | TailwindCSS',
-        live_url: 'https://lego-clone.herokuapp.com/',
-        github_url: 'https://github.com/nathankim137311/lego-store',
-        type: 'E-COMMERCE',
-        description: 'An e-commerce application that has all the features you would want!'
-    }
-
-    const starWarsApi = {
-        id: 2,
-        title: 'Lego Star Wars API',
-        query: 'lego-star-wars-api',
-        img_url: starWarsApiImg,
-        tech: 'MongoDB | Express | Node | Git | Postman',
-        live_url: 'https://rapidapi.com/nathankim137311/api/lego-star-wars-sets/',
-        github_url: 'https://github.com/nathankim137311/lego-starwars-api',
-        type: 'REST API',
-        description: 'A RESTful API that serves product data from Lego.com.'
-    }
-
-    const weatherApp = {
-        id: 3,
-        title: 'Weather App',
-        query: 'weather-app',
-        img_url: weatherAppImg,
-        tech: 'HTML | SCSS | JavaScript | Git | Postman',
-        live_url: 'https://nathankim137311.github.io/weather-app/',
-        github_url: 'https://github.com/nathankim137311/weather-app',
-        type: 'SPA',
-        description: 'A simple weather app that fetches current weather forecast based on city.'
-    }
-
-    const restaurantSite = {
-        id: 4, 
-        title: 'Restaurant Site',
-        query: 'restaurant-site',
-        img_url: restaurantSiteImg,
-        tech: 'HTML | SCSS | JavaScript | Git | Webpack',
-        live_url: 'https://nathankim137311.github.io/restaurant-page/',
-        github_url: 'https://github.com/nathankim137311/restaurant-page',
-        type: 'MPA',
-        description: 'A custom-designed restaurant site that utilizes Google Maps API.'
-    }
-
-    const projects = [legoClone, starWarsApi, weatherApp, restaurantSite]; 
+    const projectsArr = projects; 
 
     return (
         <div id='projects' className='flex flex-row justify-center'>
@@ -64,7 +13,7 @@ export default function Projects() {
                     <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Check out what I've built!</span>
                 </div>
                 <ul className='bg-transparent'>
-                    {projects.map(project => {
+                    {projectsArr.map(project => {
                         return (
                             <li key={project.id}>
                                 <ProjectCard project={project} />
