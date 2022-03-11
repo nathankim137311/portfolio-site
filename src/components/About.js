@@ -4,38 +4,65 @@ import { useInView } from 'react-intersection-observer'
 
 export default function About() {
     const {ref, inView} = useInView();
-    const animation = useAnimation();
+    const headingControls = useAnimation();
+    const containerControls = useAnimation();
 
     useEffect(() => {
-        if(inView) {
-            animation.start({
-                opacity: 1,
-                x: '0',
-                transition: {
-                    type: 'spring',
-                    ease: 'linear',
-                    duration: .5,
-                    delay: .45
-                }
-            })
+        const sequence = async () => {
+            await headingControls.start(heading.show);
+            return await containerControls.start(container.show); 
         }
+
+        if(inView) {
+            sequence();
+        }
+
     }, [inView])
+
+    const heading = {
+        hidden: {
+            opacity: 0,
+            y: -50
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.5,
+                duration: .75,
+                type: 'spring'
+            }
+        }
+    }
+
+    const container = {
+        hidden: { opacity: 0 },
+        show: { 
+            opacity: 1,
+            transition: {
+                duration: .75,
+                ease: 'linear',
+            }
+        }
+    }
 
 
   return (
     <div id='about' className='relative h-screen text-white'>
         <div ref={ref} className='absolute w-full max-w-5xl px-6 py-20 -translate-x-1/2 -translate-y-1/2 shadow-lg xs:px-10 xs:mx-auto left-1/2 top-1/2'>
             <motion.div 
-                initial={{ opacity: 0, x: '-50vw'}}
-                animate={animation}
+                initial='hidden'
+                animate={headingControls}
+                variants={heading}
                 className='mb-4'
             >
                 <h2 className='w-full mb-4 text-base font-normal text-left underline text-slate-500 underline-offset-8 decoration-2 font-archivo'>About</h2>
                 <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Get to know me!</span>
             </motion.div>
             <motion.div 
-                initial={{ opacity: 0, x: '-50vw'}}
-                animate={animation}
+                initial='hidden'
+                animate={containerControls}
+                variants={container}
                 className='bg-[#0E131F] rounded-xl px-4 py-10 xs:py-14 xs:px-8'
             >
                 <div className='text-base xs:text-lg text-slate-300 md:text-xl'>

@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 
 export default function Projects() {
     const {ref, inView} = useInView();
+    
     const headingControls = useAnimation();
     const listControls = useAnimation();
     const itemControls = useAnimation();
@@ -14,7 +15,7 @@ export default function Projects() {
 
     useEffect(() => {
         const sequence = async () => {
-            await headingControls.start(container.show);
+            await headingControls.start(heading.show);
             await listControls.start(list.show);
             return await itemControls.start(item.show);
         }
@@ -25,7 +26,7 @@ export default function Projects() {
         
     }, [inView])
 
-    const container = {
+    const heading = {
         hidden: {
             opacity: 0,
             y: -50
@@ -34,6 +35,7 @@ export default function Projects() {
             opacity: 1,
             y: 0,
             transition: {
+                delay: 0.5,
                 duration: .75,
                 type: 'spring'
             }
@@ -70,7 +72,7 @@ export default function Projects() {
                 <motion.div 
                     initial='hidden'
                     animate={headingControls}
-                    variants={container}
+                    variants={heading}
                     className='mb-4'
                 >
                     <h2 className='w-full mb-4 text-base font-normal text-left underline font-archivo underline-offset-8 decoration-2 text-slate-500'>Projects</h2>
