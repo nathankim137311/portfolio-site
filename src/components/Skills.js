@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { skills } from '../config/skillsArr';
+import Heading from './Heading';
 
 export default function Skills() {
     const {ref, inView} = useInView();
@@ -92,14 +93,13 @@ export default function Skills() {
                 variants={heading}
                 className='w-full mb-4'
             >
-                <h2 className='w-full mb-4 text-base font-normal text-left underline text-slate-500 font-archivo underline-offset-8 decoration-2'>Skills</h2>
-                <span className='text-xl font-bold sm:text-2xl text-slate-100'>Technologies and languages</span>
+                <Heading section='Skills' heading='Technologies and languages' />
             </motion.div>
             <motion.div 
                 initial='hidden'
                 animate={containerControls}
                 variants={container}
-                className='w-full px-6 xs:px-12 sm:px-16 py-12 bg-[#0E131F] flex flex-row justify-center shadow-lg rounded-xl'
+                className='flex flex-row justify-center w-full px-6 py-12 shadow-lg xs:px-12 sm:px-16 bg-space rounded-xl'
             >
                 <motion.ul 
                     initial='hidden'

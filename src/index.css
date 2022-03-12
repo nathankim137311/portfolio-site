@@ -1,5 +1,4 @@
 /* Name Heading font */
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 @tailwind base;
@@ -17,15 +16,11 @@
     }
 
     .contact-input {
-        @apply w-full px-3 py-3 text-sm md:text-base text-white placeholder-slate-300 bg-[#1E293B] border-0 rounded shadow outline-[#15ebd9] focus:outline-2;
+        @apply w-full px-3 py-3 text-sm md:text-base text-white placeholder-slate-300 bg-[#1E293B] border-0 rounded shadow outline-aqua focus:outline-2;
     }
 
     .skill-badge {
         @apply flex flex-col items-center justify-center w-16 h-16 mb-4 rounded-lg shadow-lg; 
-    }
-
-    .purple-btn {
-        @apply px-6 py-3 text-base font-bold md:text-lg text-slate-300 transition-all duration-150 ease-linear rounded-tr-xl rounded-l-xl shadow outline-none active:bg-[#be44ff] hover:shadow-lg focus:outline-none bg-transparent border-2 border-[#A400FF];
     }
 }
 

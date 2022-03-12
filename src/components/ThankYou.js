@@ -5,10 +5,10 @@ import Footer from './Footer';
 
 export default function ThankYou() {
   return (
-    <div className='h-screen bg-[#1A1A1A] text-white bg-clouds-pattern flex flex-col justify-center items-center'>
-        <AiOutlineCheckCircle className='w-12 h-12 text-green-400'/>
-        <h1 className='py-4 text-3xl'>Thank You!</h1>
-        <span>I'll reach out to you shortly.</span>
+    <div className='flex flex-col items-center justify-center h-screen bg-navy font-archivo'>
+        <AiOutlineCheckCircle className='h-auto text-green-400 w-14 xs:w-20 md:w-28'/>
+        <h1 className='py-4 text-3xl sm:text-4xl md:text-5xl text-slate-200'>Thank You!</h1>
+        <span className='text-base xs:text-xl text-slate-400'>I'll reach out to you shortly.</span>
         <NavBar />
         <Footer />
     </div>
