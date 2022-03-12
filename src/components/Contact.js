@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { MdEmail } from 'react-icons/md';
-import { Link } from 'react-router-dom'; 
-import { BsLinkedin, BsGithub, BsTwitter } from 'react-icons/bs';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import SocialLinks from './SocialLinks';
 
 const endpoint = 'https://public.herotofu.com/v1/3e818700-9b39-11ec-bdf8-dd9c99f898ec'; 
 
@@ -115,17 +114,7 @@ export default function Contact() {
                     >
                         Send a message
                     </button>
-                    <div className='flex items-center justify-between px-4 py-3 bg-gray-900 rounded-full text-slate-400 w-fit'>
-                        <Link to='https://github.com/nathankim137311'>
-                            <BsGithub className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:bg-aqua hover:scale-110'/>
-                        </Link>
-                        <Link to='https://www.linkedin.com/in/nathan-kim-826a25230/'>
-                            <BsLinkedin className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:bg-aqua hover:scale-110'/>
-                        </Link>
-                        <Link to='https://twitter.com/underdawg347'>
-                            <BsTwitter className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:bg-aqua hover:scale-110'/>
-                        </Link>
-                    </div>
+                    <SocialLinks />
                 </div>
             </form>
         </motion.div>

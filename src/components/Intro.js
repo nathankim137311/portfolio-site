@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { BsLinkedin, BsGithub, BsTwitter } from 'react-icons/bs';
 import arrowDown from '../assets/gif/arrow-down.gif';
 import { motion } from 'framer-motion';
+import SocialLinks from './SocialLinks';
 
 export default function Intro() {
 
@@ -24,17 +24,7 @@ export default function Intro() {
           className='flex items-center w-full sm:w-1/2 drop-shadow-lg xs:justify-center'
         >
           <Link className='w-1/2 px-6 py-3 mr-4 text-base font-bold text-center transition-all duration-150 ease-linear bg-transparent border-2 shadow outline-none md:mr-8 hover:scale-105 hover:cursor-pointer md:text-lg text-slate-300 rounded-tr-xl rounded-l-xl active:bg-hotpink-100 hover:shadow-lg focus:outline-none border-violet' to='contact' spy={true} smooth={true}>Contact</Link>
-          <div className='flex px-2 py-2 bg-gray-900 rounded-full md:px-4 md:py-3 text-slate-400'>
-            <a href='https://github.com/nathankim137311'>
-              <BsGithub className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-aqua hover:scale-110'/>
-            </a>
-            <a href='https://www.linkedin.com/in/nathan-kim-826a25230/'>
-              <BsLinkedin className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-aqua hover:scale-110'/>
-            </a>
-            <a href='https://twitter.com/underdawg347'>
-              <BsTwitter className='w-6 h-6 mx-2 transition-all duration-200 ease-linear hover:text-aqua hover:scale-110'/>
-            </a>
-          </div>
+          <SocialLinks />
         </motion.div>
       </div>
       <img className='absolute w-12 h-auto -translate-x-1/2 md:w-16 bottom-10 left-1/2' src={arrowDown} alt="Animated down arrow" />
