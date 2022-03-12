@@ -3,6 +3,7 @@ import { BsGithub } from 'react-icons/bs';
 import { projects } from '../config/projectsArr';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Heading from './Heading';
 
 export default function Projects() {
     const {ref, inView} = useInView();
@@ -75,8 +76,7 @@ export default function Projects() {
                     variants={heading}
                     className='mb-4'
                 >
-                    <h2 className='w-full mb-4 text-base font-normal text-left underline font-archivo underline-offset-8 decoration-2 text-slate-500'>Projects</h2>
-                    <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Check out what I've built!</span>
+                    <Heading section='Projects' heading={'Check out what I\'ve built!'} />
                 </motion.div>
                 <motion.ul 
                     initial='hidden'

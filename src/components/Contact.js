@@ -3,6 +3,7 @@ import { MdEmail } from 'react-icons/md';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SocialLinks from './SocialLinks';
+import Heading from './Heading';
 
 const endpoint = 'https://public.herotofu.com/v1/3e818700-9b39-11ec-bdf8-dd9c99f898ec'; 
 
@@ -62,8 +63,7 @@ export default function Contact() {
                 variants={heading}
                 className='w-full px-6 mb-4 xs:px-10'
             >
-                <h2 className='w-full mb-4 text-base font-normal text-left underline text-slate-500 font-archivo underline-offset-8 decoration-2'>Contact</h2>
-                <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Let's chat!</span>
+                <Heading section='Contact' heading={'Let\'s chat!'} />
             </motion.div>
         </div>
         <motion.div 

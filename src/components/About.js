@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
+import Heading from './Heading';
 
 export default function About() {
     const {ref, inView} = useInView();
@@ -56,8 +57,7 @@ export default function About() {
                 variants={heading}
                 className='mb-4'
             >
-                <h2 className='w-full mb-4 text-base font-normal text-left underline text-slate-500 underline-offset-8 decoration-2 font-archivo'>About</h2>
-                <span className='text-xl font-bold text-slate-100 sm:text-2xl'>Get to know me!</span>
+                <Heading section='About' heading='Get to know me!' />
             </motion.div>
             <motion.div 
                 initial='hidden'
