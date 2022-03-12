@@ -71,7 +71,7 @@ export default function About() {
                     Programming allows me to build for the future, and that makes me super excited. I want to be working with cutting-edge technology and building tools that will solve future problems. The most fufilling thing about programming is manifesting your vision and your ideas. Software gives value to people. That's why I am passionate about programming. 
                     </p>
                     <p className='mb-4 text-left xs:mb-6'>When I am not coding, I like to hang out with friends on Discord, go to the gym, and create art.</p>
-                    <p className='px-3 py-2 text-gray-400 border-l-8 border-hotpink-200 bg-denim xs:py-4 xs:px-6'>I wish I could by me a spaceship and fly past the sky - Kanye West</p>
+                    <p className='px-3 py-2 text-gray-400 border-l-8 border-hotpink-200 bg-denim xs:py-4 xs:px-6'>I wish I could buy me a spaceship and fly past the sky - Kanye West</p>
                 </div>
             </motion.div>
         </div>
