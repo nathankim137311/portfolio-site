@@ -22,13 +22,6 @@ module.exports = {
       fontFamily: {
         'archivo': ['Archivo Black', 'sans-serif']
       },
-      backgroundImage: {    
-        'plus': "url('./assets/svg/plus.svg')",    
-        'architect': "url('./assets/svg/architect.svg')",   
-        'falling-triangles': "url('./assets/svg/falling-triangles.svg')",    
-        'clouds-pattern': "url('./assets/svg/endless-clouds.svg')",
-        'glamorous': "url('./assets/svg/glamorous.svg')",
-      },
     },
   },
   plugins: [],
