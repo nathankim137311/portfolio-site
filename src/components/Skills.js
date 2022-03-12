@@ -21,7 +21,8 @@ export default function Skills() {
         if(inView) {
             sequence();
         }
-        
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [inView])
 
     const heading = {
