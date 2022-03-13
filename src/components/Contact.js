@@ -80,7 +80,6 @@ export default function Contact() {
                 className='w-auto' 
                 action={endpoint}
                 method='POST'
-                target='_blank' // routes to default thank you page
             >
                 <div className='mb-6 xs:mb-8'>
                     <input 
