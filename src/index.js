@@ -14,7 +14,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
-        <Route path='/thank-you' element={<ThankYou />}/>
+        <Route path='/success' element={<ThankYou />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

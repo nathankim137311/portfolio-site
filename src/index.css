@@ -12,7 +12,7 @@
 
 @layer components {
     .side-bar {
-        @apply absolute hidden w-screen h-56 px-6 text-white;
+        @apply fixed z-20 w-screen h-56 px-6 text-white bg-navy;
     }
 
     .contact-input {
