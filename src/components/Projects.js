@@ -110,28 +110,28 @@ const ProjectCard = ({ project }) => {
                 <div className='md:w-1/2'>
                     <div>
                         <span className='text-[.85rem] text-hotpink-200'>{project.type}</span>
-                        <a href={project.live_url}>
+                        <a href={project.live_url} target='_blank' rel='noreferrer'>
                             <h2 className='mb-2 text-base font-bold text-white md:text-2xl'>{project.title}</h2>
                         </a>
                     </div>
                     <div className='h-32 my-4 sm:h-40 md:h-56 opacity-80'>
-                        <a href={project.live_url}>
+                        <a href={project.live_url} target='_blank' rel='noreferrer'>
                             <img className='object-cover object-top w-full h-full rounded-md shadow-lg' src={project.img_url} alt="" />
                         </a>
                     </div>
                 </div>
                 <div className='md:w-1/2 md:pl-6'>
                     <div className='mb-2'>
-                        <a href={project.live_url}>
+                        <a href={project.live_url} target='_blank' rel='noreferrer'>
                             <h2 className='mb-2 text-base font-bold text-white md:text-xl md:hidden'>{project.title}</h2>
                         </a>
                         <p className='h-20 overflow-hidden md:h-16 md:text-lg md:text-justify'>{project.description}</p>
                     </div>
                     <div className='flex flex-row items-center mb-4'>
-                        <a className='transition-all duration-200 ease-linear text-slate-400 hover:text-aqua hover:scale-110' href={project.github_url}>
+                        <a className='transition-all duration-200 ease-linear text-slate-400 hover:text-aqua hover:scale-110' href={project.github_url} target='_blank' rel='noreferrer'>
                             <BsGithub className='w-6 h-6 mr-6 md:w-7 md:h-7' />
                         </a>
-                        <a className='px-3 py-1 text-base font-bold text-white rounded-md shadow outline-none bg-hotpink-200 hover:scale-105 active:bg-hotpink-100 hover:shadow-lg focus:outline-none md:px-5 md:py-2' href={project.live_url}>
+                        <a className='px-3 py-1 text-base font-bold text-white rounded-md shadow outline-none bg-hotpink-200 hover:scale-105 active:bg-hotpink-100 hover:shadow-lg focus:outline-none md:px-5 md:py-2' href={project.live_url} target='_blank' rel='noreferrer'>
                             Live
                         </a>
                     </div>
