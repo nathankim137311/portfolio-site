@@ -4,6 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SocialLinks from './SocialLinks';
 import Heading from './Heading';
+import Footer from './Footer';
 
 const endpoint = 'https://public.herotofu.com/v1/3e818700-9b39-11ec-bdf8-dd9c99f898ec'; 
 
@@ -56,7 +57,7 @@ export default function Contact() {
     }
     
   return (
-    <div ref={ref} id='contact' className='flex flex-col items-center justify-center h-screen'>
+    <div ref={ref} id='contact' className='relative flex flex-col items-center justify-center'>
         <div className='w-full max-w-5xl'>
             <motion.div 
                 initial='hidden'
@@ -71,13 +72,13 @@ export default function Contact() {
             initial='hidden'
             animate={formControls}
             variants={form}
-            className='w-full px-6 xs:mx-auto xs:max-w-md'
+            className='w-full px-10 xs:mx-auto xs:max-w-md xs:px-8 md:px-6'
         >
             <div className='flex justify-center w-auto'>
                 <MdEmail className='w-auto h-20 mb-8 shadow-md text-slate-100' />
             </div>
             <form
-                className='w-auto' 
+                className='w-auto mb-20' 
                 action={endpoint}
                 method='POST'
             >
@@ -118,6 +119,7 @@ export default function Contact() {
                 </div>
             </form>
         </motion.div>
+        <Footer />
     </div>
     )
 }

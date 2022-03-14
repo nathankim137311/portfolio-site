@@ -86,13 +86,13 @@ export default function Skills() {
     }
 
   return (
-    <div id='skills' className='relative h-screen bg-architect'>
-        <div ref={ref} className='absolute flex flex-col items-center w-full max-w-5xl px-6 py-12 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 sm:px-10'>
+    <div id='skills' className='bg-architect'>
+        <div ref={ref} className='flex flex-col items-center w-full max-w-5xl px-6 py-20 sm:px-10 xs:mx-auto'>
             <motion.div 
                 initial='hidden'
                 animate={headingControls}
                 variants={heading}
-                className='w-full mb-4'
+                className='w-full'
             >
                 <Heading section='Skills' heading='Technologies and languages' />
             </motion.div>

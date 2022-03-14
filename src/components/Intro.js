@@ -15,7 +15,7 @@ export default function Intro() {
           transition={{ ease: "easeIn", duration: 1 }}
         >
           <h1 className='text-6xl text-transparent font-archivo xs:text-center bg-clip-text bg-gradient-to-r from-violet to-hotpink-200'>Nathan Kim.</h1>
-          <p className='mt-4 mb-8 text-lg text-slate-300 xs:text-xl xs:text-center'>I am a <strong className='font-normal underline decoration-dotted underline-offset-[6px] decoration-hotpink-200 decoration-[3px]'>software developer</strong> that builds and designs responsive web applications.</p>
+          <p className='mt-4 mb-8 text-lg text-slate-300 xs:text-xl xs:text-center'>I am a <strong className='text-hotpink-200'>software developer</strong> that builds and designs responsive web applications.</p>
         </motion.div>
         <motion.div 
           initial={{ opacity: 0 }}

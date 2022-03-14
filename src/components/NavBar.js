@@ -55,30 +55,30 @@ const Menu = ({ active, setActive}) => {
           <XIcon className='w-6 h-6'/>
         </button>
       </div>
-      <nav>
+      <nav className='pb-6'>
         <ul className='text-white text-md'>
-          <li className='flex items-center justify-start h-10 px-2 border-b-2 border-gray-700'>
-            <DocumentTextIcon className='w-6 h-6 mr-4 text-aqua'/>
-            <h3>
-              <Link onClick={() => setActive(false)} className='hover:cursor-pointer' to='skills' spy={true} smooth={true}>Skills</Link>
+          <li className='flex items-center justify-start h-10 px-2 border-slate-700 border-b-[1px]'>
+            <DocumentTextIcon className='w-6 h-6 mr-4'/>
+            <h3 className='w-full'>
+              <Link onClick={() => setActive(false)} className='block w-auto transition-all duration-200 ease-linear hover:cursor-pointer hover:text-aqua' to='skills' spy={true} smooth={true}>Skills</Link>
             </h3>
           </li>
-          <li className='flex items-center justify-start h-10 px-2 border-gray-700 border-y-2'>
-            <EmojiHappyIcon className='w-6 h-6 mr-4 text-aqua'/>
-            <h3>
-              <Link onClick={() => setActive(false)} className='hover:cursor-pointer' to='about' spy={true} smooth={true}>About</Link>
+          <li className='flex items-center justify-start h-10 px-2 border-slate-700 border-b-[1px]'>
+            <EmojiHappyIcon className='w-6 h-6 mr-4'/>
+            <h3 className='w-full'>
+              <Link onClick={() => setActive(false)} className='block w-auto transition-all duration-200 ease-linear hover:cursor-pointer hover:text-aqua' to='about' spy={true} smooth={true}>About</Link>
             </h3>
           </li>
-          <li className='flex items-center justify-start h-10 px-2 border-b-2 border-gray-700'>
-            <CollectionIcon className='w-6 h-6 mr-4 text-aqua'/>
-            <h3>
-              <Link onClick={() => setActive(false)} className='hover:cursor-pointer' to='projects' spy={true} smooth={true}>Projects</Link>
+          <li className='flex items-center justify-start h-10 px-2 border-b-[1px] border-slate-700'>
+            <CollectionIcon className='w-6 h-6 mr-4'/>
+            <h3 className='w-full'>
+              <Link onClick={() => setActive(false)} className='block w-auto transition-all duration-200 ease-linear hover:cursor-pointer hover:text-aqua' to='projects' spy={true} smooth={true}>Projects</Link>
             </h3>
           </li>
-          <li className='flex items-center justify-start h-10 px-2 border-b-2 border-gray-700'>
-            <PhoneIcon className='w-6 h-6 mr-4 text-aqua'/>
-            <h3>
-              <Link onClick={() => setActive(false)} className='hover:cursor-pointer' to='contact' spy={true} smooth={true}>Contact</Link>
+          <li className='flex items-center justify-start h-10 px-2 border-b-[1px] border-slate-700'>
+            <PhoneIcon className='w-6 h-6 mr-4'/>
+            <h3 className='w-full'>
+              <Link onClick={() => setActive(false)} className='block w-auto transition-all duration-200 ease-linear hover:cursor-pointer hover:text-aqua' to='contact' spy={true} smooth={true}>Contact</Link>
             </h3>
           </li>
         </ul>
